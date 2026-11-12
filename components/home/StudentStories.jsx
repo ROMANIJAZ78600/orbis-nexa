@@ -95,7 +95,7 @@ export default function StudentStories() {
   }, []);
 
   return (
-    <section className="relative w-full bg-white py-16 px-4 sm:px-6 lg:px-12">
+    <section className="relative w-full overflow-x-clip bg-white py-16 px-4 sm:px-6 lg:px-12">
       {/* SECTION HEADER */}
       <div className="mx-auto max-w-4xl text-center mb-12">
         <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl text-[#0b1c38]">

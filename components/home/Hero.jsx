@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import {
@@ -67,15 +67,49 @@ const slides = [
 export default function Hero() {
   const [current, setCurrent] = useState(0);
   const [activeTab, setActiveTab] = useState("Courses");
+  const sectionRef = useRef(null);
+  // AUTO SLIDE - PAUSE WHEN HERO IS NOT VISIBLE
+  useEffect(() => {
+    const section = sectionRef.current;
+    if (!section) return;
+
+    let interval = null;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          // Prevent multiple intervals
+          if (!interval) {
+            interval = setInterval(() => {
+              setCurrent((prev) => (prev + 1) % slides.length);
+            }, 5000);
+          }
+        } else {
+          clearInterval(interval);
+          interval = null;
+        }
+      },
+      {
+        threshold: 0.15,
+      },
+    );
+
+    observer.observe(section);
+
+    return () => {
+      observer.disconnect();
+      clearInterval(interval);
+    };
+  }, []);
 
   // AUTO SLIDE
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % slides.length);
-    }, 5000);
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setCurrent((prev) => (prev + 1) % slides.length);
+  //   }, 5000);
 
-    return () => clearInterval(interval);
-  }, []);
+  //   return () => clearInterval(interval);
+  // }, []);
 
   const nextSlide = () => {
     setCurrent((prev) => (prev + 1) % slides.length);
@@ -88,7 +122,7 @@ export default function Hero() {
   const slide = slides[current];
 
   return (
-    <section className="relative w-full">
+    <section ref={sectionRef} className="relative w-full">
       {/* BACKGROUND CAROUSEL */}
 
       <div className="relative mt-[100px] h-[640px] md:mt-[120px] md:h-[820px] w-full overflow-hidden">

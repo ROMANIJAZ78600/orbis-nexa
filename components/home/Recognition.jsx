@@ -11,7 +11,7 @@ export default function Recognition() {
             <div className="bg-black/10 border-black/50 w-45 h-45 rounded-[10px] p-5">
               <img
                 alt="FBR LOGO"
-                srcset="https://crystalpng.com/wp-content/uploads/2025/04/fbr-logo-1.png"
+                srcSet="https://crystalpng.com/wp-content/uploads/2025/04/fbr-logo-1.png"
               />
               <p className="text-center text-gray-300 font-semibold mt-4">
                 FBR
@@ -20,7 +20,7 @@ export default function Recognition() {
             <div className="bg-black/10 border-black/50 w-45 h-45 rounded-[10px] p-5">
               <img
                 alt="SECP LOGO"
-                srcset="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyC6od2q1F74YQI6QY5DTk20Nw7qYikyitTMLQdto35w&s"
+                srcSet="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyC6od2q1F74YQI6QY5DTk20Nw7qYikyitTMLQdto35w&s"
               />
               <p className="text-center text-gray-300 font-semibold mt-4">
                 FBR
@@ -29,7 +29,7 @@ export default function Recognition() {
             <div className="bg-black/10 border-black/50 w-45 h-45 rounded-[10px] p-5">
               <img
                 alt="IELTS LOGO"
-                srcset="https://brandlogovector.com/wp-content/uploads/2022/03/IELTS-Logo-Small.png"
+                srcSet="https://brandlogovector.com/wp-content/uploads/2022/03/IELTS-Logo-Small.png"
               />
               <p className="text-center text-gray-300 font-semibold mt-4">
                 FBR
@@ -38,7 +38,7 @@ export default function Recognition() {
             <div className="bg-black/10 border-black/50 w-45 h-45 rounded-[10px] p-5">
               <img
                 alt="FBR LOGO"
-                srcset="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSC2zabbeugurNlNf0uOUmrAd_jlqnvaYKJ8UT3MouRoirSxfZeCzJzM7E&s=10"
+                srcSet="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSC2zabbeugurNlNf0uOUmrAd_jlqnvaYKJ8UT3MouRoirSxfZeCzJzM7E&s=10"
               />
               <p className="text-center text-gray-300 font-semibold mt-4">
                 UK GOVT
