@@ -106,12 +106,12 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="grid lg:grid-cols-4 grid-cols-1 gap-3 lg:h-75 h-full  bg-gray-100 lg:pl-10 pl-5 lg:pt-10 pt-5">
+      <div className="grid lg:grid-cols-4 grid-cols-1 gap-3 lg:h-75 h-full  bg-gray-100 lg:pl-3 pl-5 lg:pt-10 pt-5">
         {/* First */}
         {tagscard.map((tag, index) => (
           <div
             key={index}
-            className="relative overflow-hidden group cursor-pointer isolate flex flex-col gap-3 items-center justify-center bg-white w-80 h-50 rounded-[10px] hover:-translate-y-1 transition-all duration-300 lg:ml-2"
+            className="relative overflow-hidden group cursor-pointer isolate flex flex-col gap-3 items-center justify-center bg-white w-80 h-50 rounded-[10px] hover:-translate-y-1 transition-all duration-300 lg:mr-6 "
           >
             <div className="absolute top-0 w-1 h-1 lg:block hidden rounded-full bg-[#0265aa] z-[-1] group-hover:w-full duration-300" />
             <div className="absolute bottom-[-15px] right-[-15px] w-20 h-20 group-hover:w-30 group-hover:h-30 duration-300 rounded-full bg-blue-100 group-hover:scale-105 z-[-1]" />
@@ -120,7 +120,7 @@ export default function Hero() {
           </div>
         ))}
       </div>
-      <div className="h-2 rounded w-[100%] bg-gradient-to-l from-blue-800 via-white to-blue-800" />
+      <div className="h-2 rounded w-[100%] bg-gradient-to-l from-blue-800 via-blue-400/50 to-blue-800" />
     </section>
   );
 }

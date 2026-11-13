@@ -6,10 +6,10 @@ export default function FinalCTA() {
       <div className="w-[80%] h-full mx-auto rounded-[15px]">
         <div className="flex lg:flex-row flex-col justify-between items-center">
           <div className="lg:w-[50%] w-full">
-            <h2 className="text-4xl text-black w-full">
+            <h2 className="text-4xl text-black font-bold lg:w-full w-[300px]">
               Your global study plan starts with clarity.
             </h2>
-            <p className="mt-4 text-sm leading-relaxed text-gray-700">
+            <p className="mt-4 text-sm leading-relaxed text-gray-700 text-justify">
               Take the first step toward your international education journey.
               Get expert guidance, explore the right universities and
               destinations, and create a personalized study plan that turns your

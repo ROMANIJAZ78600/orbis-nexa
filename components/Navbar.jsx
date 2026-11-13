@@ -89,7 +89,7 @@ export default function Navbar() {
               <Link
                 href={link.href}
                 onClick={closeMenu}
-                className={`group relative flex items-center gap-1 py-3 text-[14px] font-bold tracking-wide transition-colors duration-300 ${
+                className={`group relative flex items-center gap-1 py-3 lg:text-xs font-bold tracking-wide transition-colors duration-300 ${
                   pathname === link.href ||
                   (link.href !== "/" && pathname.startsWith(link.href))
                     ? "text-[#0265AA]"
