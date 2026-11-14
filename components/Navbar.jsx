@@ -15,7 +15,7 @@ const navLinks = [
   { name: "About Us", href: "/about" },
   { name: "Destinations", href: "/destinations", dropdown: true },
   { name: "Blogs", href: "/blogs" },
-  { name: "IELTS Test Preparation", href: "/ielts-test-preparation" },
+  { name: "IELTS Test Preparation", href: "/ielts-preparation" },
   { name: "Become a Partner", href: "/become-a-partner" },
   { name: "Contact Us", href: "/contact" },
 ];
