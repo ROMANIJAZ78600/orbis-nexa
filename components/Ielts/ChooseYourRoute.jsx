@@ -79,13 +79,13 @@ export default function ChooseYourRoute() {
                 admission and professional registration.
               </p>
               <div className="flex lg:flex-row flex-col gap-5 items-center mt-5 mr-20">
-                <p className="text-[7px] lg:w-40 w-35  lg:text-xs border-1 border-black/50 p-2 rounded-full text-white">
+                <p className="text-[7px] lg:w-40 w-30  lg:text-xs border-1 border-black/50 p-2 rounded-full text-white">
                   Data & diagram writing
                 </p>
-                <p className="text-[7px] lg:w-45 w-35  lg:text-xs border-1 border-black/50 p-2 rounded-full text-white">
+                <p className="text-[7px] lg:w-45 w-30  lg:text-xs border-1 border-black/50 p-2 rounded-full text-white">
                   Academic reading strategies
                 </p>
-                <p className="text-[7px] lg:w-40 w-35  lg:text-xs border-1 border-black/50 p-2 rounded-full text-white">
+                <p className="text-[7px] lg:w-40 w-30  lg:text-xs border-1 border-black/50 p-2 rounded-full text-white">
                   Speaking confidence
                 </p>
               </div>

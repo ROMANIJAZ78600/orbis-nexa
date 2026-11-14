@@ -7,6 +7,9 @@ import Navbar from "@/components/Navbar";
 import CTA from "@/components/Partner/CTA";
 import Hero from "@/components/Ielts/Hero";
 import ChooseYourRoute from "@/components/Ielts/ChooseYourRoute";
+import FourSkills from "@/components/Ielts/FourSkills";
+import Steps from "@/components/Ielts/Steps";
+import GuidanceTeam from "@/components/Ielts/GuidanceTeam";
 
 export default function Contact() {
   return (
@@ -14,6 +17,9 @@ export default function Contact() {
       <Navbar />
       <Hero />
       <ChooseYourRoute />
+      <FourSkills />
+      <Steps />
+      <GuidanceTeam />
       <Faqs />
       <CTA />
       <Recognition />
