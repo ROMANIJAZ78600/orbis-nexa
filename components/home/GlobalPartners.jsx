@@ -177,10 +177,10 @@ export default function GlobalPartners() {
             {filteredUniversities.map((uni) => (
               <div
                 key={uni.id || uni.name}
-                className="relative group isolate overflow-hidden flex flex-col items-center justify-center gap-3 rounded-xl border border-blue-100 bg-blue-50 p-5 text-center shadow-md shadow-blue-100 transition-all duration-300 hover:-translate-y-2 hover:shadow-lg cursor-pointer"
+                className="relative group isolate overflow-hidden flex flex-col items-center justify-center gap-3 rounded-xl border border-blue-100 bg-blue-50 p-5 text-center shadow-md shadow-blue-100 transition-all duration-300 hover:-translate-y-2 active:-translate-y-2 hover:shadow-lg active:shadow-lg cursor-pointer"
               >
-                <div className="absolute top-0 w-1 h-1 lg:block hidden rounded-full bg-[#0265aa] z-[-1] group-hover:w-full duration-300" />
-                <div className="absolute bottom-[-15px] right-[-15px] w-20 h-20 group-hover:w-30 group-hover:h-30 duration-300 rounded-full bg-blue-100 group-hover:scale-105 z-[-1]" />
+                <div className="absolute top-0 w-1 h-1 lg:block hidden rounded-full bg-[#0265aa] z-[-1] group-hover:w-full active:group-hover:w-full duration-300" />
+                <div className="absolute bottom-[-15px] right-[-15px] w-20 h-20 group-hover:w-30 active:group-hover:w-30 group-hover:h-30 active:group-hover:h-30 duration-300 rounded-full bg-blue-100 group-hover:scale-105 active:group-hover:scale-105 z-[-1]" />
                 <img
                   src={uni.logo}
                   alt={uni.name}

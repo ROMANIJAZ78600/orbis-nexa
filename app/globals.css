@@ -31,3 +31,9 @@ html {
 section {
   scroll-margin-top: 100px;
 }
+
+/* Scrollbar ki poori width/height */
+::-webkit-scrollbar {
+  width: 8px; /* Scrollbar ki motai (thickness) */
+  height: 8px;
+}

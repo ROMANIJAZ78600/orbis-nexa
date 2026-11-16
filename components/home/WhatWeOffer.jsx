@@ -37,18 +37,18 @@ export default function WhatWeOffer() {
       <div className="mt-15">
         <div className="flex flex-wrap lg:grid-cols-4 md:grid-cols-2 xl:grid-cols-4 grid-cols-1 gap-4 justify-center items-center mx-auto">
           {/* card1 */}
-          <div className="group w-80 h-80 bg-blue-100 rounded-[20px] cursor-pointer border-1 border-blue-200 hover:scale-105 duration-300 shadow-md shadow-blue-200 hover:bg-gradient-to-br hover:from-blue-800 hover:via-blue-400 hover:to-blue-600 transition-all duration-300">
+          <div className="group active w-80 h-80 bg-blue-100 rounded-[20px] cursor-pointer border-1 border-blue-200 hover:scale-105 active:scale-105 duration-300 shadow-md shadow-blue-200 hover:bg-gradient-to-br active:bg-gradient-to-br active:from-blue-800 hover:from-blue-800 hover:via-blue-400 active:via-blue-400 hover:to-blue-600 active:to-blue-600 transition-all duration-300 active:duration-300">
             <div className="flex gap-10 items-center justify-between mt-5 ml-5">
-              <p className="text-gray-600 font-bold group-hover:text-gray-300">
+              <p className="text-gray-600 font-bold group-hover:text-gray-300 active:text-gray-300 ">
                 01
               </p>
-              <span className="border-1 border-black/50 p-2 rounded-full mr-5 group-hover:border-white/50 group-hover:text-white">
+              <span className="border-1 border-black/50 p-2 rounded-full mr-5 group-hover:border-white/50 active:border-white/50 group-hover:text-white active:group-hover:text-white">
                 <Sparkles />
               </span>
             </div>
 
             <div className="flex flex-col gap-2 p-6">
-              <h6 className="text-[22px] font-bold group-hover:text-gray-300">
+              <h6 className="text-[22px] font-bold group-hover:text-gray-300 active:text-gray-300 transition-colors duration-200 select-none tap-highlight-transparent">
                 Career <br /> Counseling
               </h6>
               <p className="text-[16px] text-gray-600 group-hover:text-gray-300">
@@ -58,8 +58,10 @@ export default function WhatWeOffer() {
             </div>
 
             <button className="flex gap-40 p-5 items-center justify-between">
-              <span className="ml-2 group-hover:text-white">Learn More</span>
-              <ArrowUpRight className="group-hover:text-white" />
+              <span className="ml-2 group-hover:text-white active:group-hover:text-white">
+                Learn More
+              </span>
+              <ArrowUpRight className="group-hover:text-white active:group-hover:text-white" />
             </button>
           </div>
 

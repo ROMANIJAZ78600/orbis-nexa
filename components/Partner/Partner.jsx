@@ -14,7 +14,7 @@ const selectClass =
 export default function Hero() {
   return (
     <section className="relative w-full">
-      <div className="relative mt-[100px] md:mt-[120px] min-h-[700px] w-full overflow-hidden bg-gradient-to-br from-[#0265aa] via-blue-500 to-[#0265aa]">
+      <div className="relative mt-[100px] md:mt-[120px] min-h-[700px] w-full overflow-hidden bg-gradient-to-br from-[#0265aa] via-[#004d85] to-[#001f3f]">
         <div className="flex justify-between lg:flex-row flex-col gap-10 px-4 sm:px-6 lg:px-0">
           {/* LEFT CONTENT - ORIGINAL DESIGN */}
           <div className="min-w-0">
@@ -107,7 +107,7 @@ export default function Hero() {
               repeat: Infinity,
               ease: "easeInOut",
             }}
-            className="absolute lg:right-25 lg:top-125 lg:p-7 p-5 flex gap-5 items-center rotate-1 rounded-[15px] bg-[#0265aa] lg:w-[585px] lg:h-25 w-[310px] h-20 top-[850px] right-6"
+            className="absolute lg:right-20 lg:top-120 lg:p-7 p-5 flex gap-5 items-center rotate-1 rounded-[15px] bg-[#0265aa] lg:w-[565px] lg:h-25 w-[310px] h-20 top-[850px] right-6"
           >
             <FaHandshake size={35} color="#ffffff" />
             <div>

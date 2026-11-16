@@ -2,90 +2,108 @@
 
 import { motion } from "framer-motion";
 
+const stepsData = [
+  {
+    number: "01",
+    title: "Diagnose",
+    desc: "Pinpoint exact band-lowering habits",
+  },
+  { number: "02", title: "Build", desc: "Master core structures & templates" },
+  { number: "03", title: "Drill", desc: "Targeted practice on weak areas" },
+  { number: "04", title: "Simulate", desc: "Real exam pressure & time limits" },
+  { number: "05", title: "Refine", desc: "Final polish for your target score" },
+];
+
 export default function Steps() {
   return (
-    <section className="relative w-full bg-[#F3F7F4] py-16 px-4 sm:px-6 lg:px-12 lg:mt-20">
-      <div className="flex justify-between lg:flex-row flex-col">
-        <div className="min-w-0">
-          <p className="relative flex items-center gap-3 tracking-[0.1em] w-55 bg-blue-200/20 border-1 font-bold border-blue-400/50 px-3 py-2 rounded-full text-blue-500 lg:text-black/50 text-sm">
-            <motion.span
-              animate={{
-                scale: [1, 2.4],
-                opacity: [0.8, 0],
-              }}
-              transition={{
-                duration: 2.2,
-                repeat: Infinity,
-                ease: "easeOut",
-              }}
-              className="absolute w-3 h-3 rounded-full bg-blue-400"
-            />
-            <span className="relative z-10 w-2.5 h-2.5 rounded-full bg-blue-600 shadow-sm" />{" "}
+    <section className="relative w-full bg-[#F3F7F4] py-16 lg:py-24 px-4 sm:px-6 lg:px-16 overflow-hidden">
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between items-start lg:items-center gap-12 lg:gap-16">
+        {/* Left Column */}
+        <div className="w-full lg:w-5/12">
+          <p className="relative inline-flex items-center gap-3 tracking-[0.12em] bg-blue-500/10 border border-blue-400/40 px-4 py-2 rounded-full text-blue-700 font-bold text-xs uppercase">
+            <span className="relative flex h-2.5 w-2.5">
+              <motion.span
+                animate={{ scale: [1, 2.4], opacity: [0.8, 0] }}
+                transition={{
+                  duration: 2.2,
+                  repeat: Infinity,
+                  ease: "easeOut",
+                }}
+                className="absolute inline-flex h-full w-full rounded-full bg-blue-500"
+              />
+              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-blue-600" />
+            </span>
             THE ORBIS BUILDER
           </p>
 
-          <h1 className="mt-3 lg:text-5xl text-3xl font-bold">
-            Not more homework. <br />{" "}
-            <span className="italic text-[#0265aa] font-light">
+          <h2 className="mt-5 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 leading-[1.12]">
+            Not more homework. <br />
+            <span className="italic text-[#0265aa] font-serif font-normal">
               Better decisions.
             </span>
-          </h1>
-          <p className="mt-3 text-gray-600 lg:w-120">
+          </h2>
+
+          <p className="mt-4 text-slate-600 text-base leading-relaxed max-w-md">
             Strong IELTS preparation is a feedback system. Every practice task
             should reveal what to fix, what to repeat and what to stop doing.
           </p>
 
-          <div className="flex flex-col gap-1 p-5 border-l-4 mt-3 border-orange-400 h-20 bg-blue-900 rounded-tr-[20px] rounded-br-[20px]">
-            <span className="uppercase text-xs text-white font-bold">
+          <div className="flex flex-col gap-1 p-5 border-l-4 mt-7 border-orange-400 bg-blue-950 rounded-r-2xl shadow-md max-w-md">
+            <span className="uppercase text-[11px] tracking-wider text-orange-300 font-bold">
               Your target
             </span>
-            <span className="text-[13px] lg:text-sm text-white leading-6">
+            <span className="text-sm text-white/95 leading-6">
               Turn weak patterns into repeatable exam skills.
             </span>
           </div>
         </div>
 
-        <div className="min-w-0 lg:mr-5 lg:mb-7">
-          <div className="lg:w-50 h-20 bg-white shadow-md p-3 lg:mt-0 mt-5 border-1 border-black/30 rounded-full relative lg:right-110 shadow-md">
-            <span className="bg-black text-blue-400 p-3 rounded-full relative top-3">
-              01
-            </span>
-            <span className="lg:text-2xl ml-3 text-xl relative top-3">
-              Diagnose
-            </span>
-          </div>
-          <div className="lg:w-50 h-20 bg-white shadow-md p-3 lg:mt-0 mt-5 border-1 border-black/30 rounded-full relative lg:right-80 lg:top-3 shadow-md">
-            <span className="bg-black text-blue-400 p-3 rounded-full relative top-3">
-              02
-            </span>
-            <span className="lg:text-2xl ml-3 text-xl relative top-3">
-              Build
-            </span>
-          </div>
-          <div className="lg:w-50 h-20 bg-white shadow-md p-3 lg:mt-0 mt-5 border-1 border-black/30 rounded-full relative lg:right-50 lg:top-6 shadow-md">
-            <span className="bg-black text-blue-400 p-3 rounded-full relative top-3">
-              03
-            </span>
-            <span className="lg:text-2xl ml-3 text-xl relative top-3">
-              Drill
-            </span>
-          </div>
-          <div className="lg:w-50 h-20 bg-white shadow-md p-3 lg:mt-0 mt-5 border-1 border-black/30 rounded-full relative lg:right-20 lg:top-10 shadow-md">
-            <span className="bg-black text-blue-400 p-3 rounded-full relative top-3">
-              04
-            </span>
-            <span className="lg:text-2xl ml-3 text-xl relative top-3">
-              Simulate
-            </span>
-          </div>
-          <div className="lg:w-50 h-20 bg-white shadow-md p-3 lg:mt-0 mt-5 border-1 border-black/30 rounded-full relative lg:right-[-20px] lg:top-15 shadow-md">
-            <span className="bg-black text-blue-400 p-3 rounded-full relative top-3">
-              05
-            </span>
-            <span className="lg:text-2xl ml-3 text-xl relative top-3">
-              Refine
-            </span>
-          </div>
+        {/* Right Column: Stepped Pills */}
+        <div className="w-full lg:w-7/12 flex flex-col gap-4 relative">
+          {stepsData.map((step, index) => {
+            // Desktop par clean staircase indentation (0%, 8%, 16%, 24%, 32%)
+            const desktopOffsets = [
+              "lg:ml-0",
+              "lg:ml-12",
+              "lg:ml-24",
+              "lg:ml-36",
+              "lg:ml-48",
+            ];
+
+            return (
+              <motion.div
+                key={step.number}
+                initial={{ opacity: 0, x: 40 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.45, delay: index * 0.1 }}
+                whileHover={{ x: 8 }}
+                className={`group flex items-center justify-between gap-4 w-full lg:w-[360px] bg-white hover:bg-blue-950 p-3 pr-6 rounded-full border border-slate-200/90 hover:border-blue-900 shadow-sm hover:shadow-xl transition-colors duration-300 cursor-default ${desktopOffsets[index]}`}
+              >
+                <div className="flex items-center gap-4">
+                  {/* Number Circle */}
+                  <span className="flex items-center justify-center w-12 h-12 rounded-full bg-slate-950 group-hover:bg-[#0265aa] text-blue-400 group-hover:text-white font-bold text-sm shrink-0 transition-colors duration-300">
+                    {step.number}
+                  </span>
+
+                  {/* Title & Subtitle */}
+                  <div>
+                    <h3 className="text-lg sm:text-xl font-bold text-slate-900 group-hover:text-white transition-colors">
+                      {step.title}
+                    </h3>
+                    <p className="text-xs text-slate-500 group-hover:text-blue-200 transition-colors">
+                      {step.desc}
+                    </p>
+                  </div>
+                </div>
+
+                {/* Subtle Arrow */}
+                <span className="text-slate-300 group-hover:text-orange-400 group-hover:translate-x-1 transition-all text-lg font-semibold">
+                  →
+                </span>
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     </section>
