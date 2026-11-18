@@ -1,6 +1,10 @@
+"use client";
+
 import { ArrowUpRight } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 export default function FinalCTA() {
+  const router = useRouter();
   return (
     <section className="relative w-full bg-white py-16 px-4 sm:px-6 lg:px-12">
       <div className="w-[80%] h-full mx-auto rounded-[15px]">
@@ -17,7 +21,10 @@ export default function FinalCTA() {
             </p>
           </div>
           <div className="lg:w-[50%] w-full">
-            <button className="flex gap-2 lg:justify-center lg:w-[50%] w-full lg:ml-80 bg-[#0265aa] p-4 text-white mt-6 rounded-[15px] hover:scale-95 cursor-pointer duration-300">
+            <button
+              onClick={() => router.push("/contact")}
+              className="flex gap-2 lg:justify-center lg:w-[50%] w-full lg:ml-80 bg-[#0265aa] p-4 text-white mt-6 rounded-[15px] hover:scale-95 cursor-pointer duration-300"
+            >
               Book a Free Consultation <ArrowUpRight />
             </button>
           </div>

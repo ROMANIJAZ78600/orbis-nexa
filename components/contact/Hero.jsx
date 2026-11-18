@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight, Check } from "lucide-react";
+import { useState } from "react";
 
 const inputClass =
   "lg:w-70 w-full rounded-xl border border-gray-200 bg-gray-50 px-3 py-2 text-sm text-gray-800 outline-none transition-all duration-200 placeholder:text-gray-400 focus:border-[#0265AA] focus:bg-white focus:ring-4 focus:ring-[#0265AA]/10";
@@ -10,6 +11,40 @@ const selectClass =
   "lg:w-70 w-full  appearance-none rounded-xl border border-gray-200 bg-gray-50 px-3 py-2 text-sm text-gray-600 outline-none transition-all duration-200 focus:border-[#0265AA] focus:bg-white focus:ring-4 focus:ring-[#0265AA]/10";
 
 export default function Hero() {
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    email: "",
+    country: "",
+    qualification: "",
+    intake: "",
+    city: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const phoneNumber = "923070474920";
+
+    const text = `*New Study Abroad Enquiry*%0A
+*Name:* ${formData.name}%0A
+*Phone:* ${formData.phone}%0A
+*Email:* ${formData.email}%0A
+*Preferred Destination:* ${formData.country}%0A
+*Study Level:* ${formData.qualification}%0A
+*Target Intake:* ${formData.intake}%0A
+*City:* ${formData.city}%0A
+*Message:* ${formData.message}`;
+
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${text}`;
+    window.open(whatsappURL, "_blank");
+  };
   return (
     <section className="relative w-full">
       <div className="relative mt-[100px] md:mt-[120px] min-h-[850px] w-full overflow-hidden bg-gradient-to-br from-[#0265aa] via-blue-500 to-[#0265aa]">
@@ -124,7 +159,7 @@ export default function Hero() {
             </div>
 
             <form
-              onSubmit={(e) => e.preventDefault()}
+              onSubmit={handleSubmit}
               className="relative flex flex-col gap-6 p-4 sm:p-6 lg:p-8 pt-8"
             >
               {/* FORM HEADER */}
@@ -153,6 +188,8 @@ export default function Hero() {
                   <input
                     type="text"
                     name="name"
+                    value={formData.name}
+                    onChange={handleChange}
                     placeholder="Full Name *"
                     autoComplete="name"
                     required
@@ -169,6 +206,8 @@ export default function Hero() {
                       <input
                         type="tel"
                         name="phone"
+                        value={formData.phone}
+                        onChange={handleChange}
                         placeholder="Phone Number *"
                         autoComplete="tel-national"
                         required
@@ -183,6 +222,8 @@ export default function Hero() {
                       <input
                         type="email"
                         name="email"
+                        value={formData.email}
+                        onChange={handleChange}
                         placeholder="Email Address *"
                         autoComplete="email"
                         required
@@ -206,19 +247,21 @@ export default function Hero() {
                     </label>
                     <select
                       name="country"
-                      defaultValue=""
+                      value={formData.country}
+                      onChange={handleChange}
                       required
                       className={selectClass}
                     >
                       <option value="" disabled>
                         Prefered Destination
                       </option>
-                      <option value="us">United States</option>
-                      <option value="gb">United Kingdom</option>
-                      <option value="ca">Canada</option>
-                      <option value="au">Australia</option>
-                      <option value="de">Germany</option>
-                      <option value="jp">Japan</option>
+                      <option value="United States">United States</option>
+                      <option value="United Kingdom">United Kingdom</option>
+                      <option value="Canada">Canada</option>
+                      <option value="Australia">Australia</option>
+                      <option value="Germany">Germany</option>
+                      <option value="France">France</option>
+                      <option value="Italy">Italy</option>
                     </select>
                   </div>
 
@@ -231,7 +274,8 @@ export default function Hero() {
                     </label>
                     <select
                       name="qualification"
-                      defaultValue=""
+                      value={formData.qualification}
+                      onChange={handleChange}
                       required
                       className={`${selectClass}`}
                     >
@@ -264,7 +308,8 @@ export default function Hero() {
                       </label>
                       <select
                         name="intake"
-                        defaultValue=""
+                        value={formData.intake}
+                        onChange={handleChange}
                         required
                         className={selectClass}
                       >
@@ -285,6 +330,8 @@ export default function Hero() {
                       </label>
                       <input
                         type="text"
+                        value={formData.city}
+                        onChange={handleChange}
                         name="city"
                         placeholder="e.g. Lahore, Islamabad"
                         className={`${inputClass} sm:col-span-2`}
@@ -301,6 +348,8 @@ export default function Hero() {
                   <label htmlFor="">Tell us briefly about your Profile</label>
                   <textarea
                     name="message"
+                    value={formData.message}
+                    onChange={handleChange}
                     placeholder="Tell us briefly about your study plans..."
                     rows={4}
                     className={`lg:w-full w-full rounded-xl border border-gray-200 bg-gray-50 px-3 py-2 text-sm text-gray-800 outline-none transition-all duration-200 placeholder:text-gray-400 focus:border-[#0265AA] focus:bg-white focus:ring-4 focus:ring-[#0265AA]/10 resize-none`}

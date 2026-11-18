@@ -1,3 +1,5 @@
+"use client";
+
 import Hero from "@/components/about/Hero";
 import Support from "@/components/about/Support";
 import Team from "@/components/about/Team";

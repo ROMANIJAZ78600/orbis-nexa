@@ -1,4 +1,4 @@
-"use client";
+// "use client";
 
 import ContactModal from "@/components/ContactModal";
 import CountryOptions from "@/components/Destination/CountryOptions";
@@ -12,15 +12,15 @@ import FinalCTA from "@/components/home/FinalCTA";
 import Recognition from "@/components/home/Recognition";
 import Navbar from "@/components/Navbar";
 import CTA from "@/components/Partner/CTA";
-import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+// import { usePathname } from "next/navigation";
+// import { useEffect, useState } from "react";
 
 export default function Destinations() {
-  const pathname = usePathname();
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  useEffect(() => {
-    setIsModalOpen(true);
-  }, [pathname]);
+  // const pathname = usePathname();
+  // const [isModalOpen, setIsModalOpen] = useState(false);
+  // useEffect(() => {
+  //   setIsModalOpen(true);
+  // }, [pathname]);
   return (
     <div className="min-h-screen">
       <Navbar />
@@ -34,10 +34,10 @@ export default function Destinations() {
       <Recognition />
       <FinalCTA />
       <Footer />
-      <ContactModal
+      {/* <ContactModal
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
-      />
+      /> */}
     </div>
   );
 }

@@ -1,4 +1,4 @@
-"use client";
+// "use client";
 
 import Footer from "@/components/Footer";
 import Faqs from "@/components/home/Faqs";
@@ -17,16 +17,16 @@ import StepsSection from "@/components/Ielts/StepsSection";
 import BandJourney from "@/components/Ielts/BandJourney";
 import WHYORBIS from "@/components/Ielts/WHYORBIS";
 import IeltsAssessmentSection from "@/components/Ielts/AsessmentSection";
-import { useEffect, useState } from "react";
-import { usePathname } from "next/navigation";
-import ContactModal from "@/components/ContactModal";
+// import { useEffect, useState } from "react";
+// import { usePathname } from "next/navigation";
+// import ContactModal from "@/components/ContactModal";
 
 export default function IELTS() {
-  const pathname = usePathname();
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  useEffect(() => {
-    setIsModalOpen(true);
-  }, [pathname]);
+  // const pathname = usePathname();
+  // const [isModalOpen, setIsModalOpen] = useState(false);
+  // useEffect(() => {
+  //   setIsModalOpen(true);
+  // }, [pathname]);
   return (
     <div className="min-h-screen">
       <Navbar />
@@ -45,11 +45,11 @@ export default function IELTS() {
       <Recognition />
       <FinalCTA />
       <Footer />
-
+      {/* 
       <ContactModal
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
-      />
+      /> */}
     </div>
   );
 }

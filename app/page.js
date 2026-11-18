@@ -1,4 +1,4 @@
-"use client";
+// "use client";
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -11,15 +11,7 @@ import ContactSection from "@/components/home/ContactSection";
 import Testimonials from "@/components/home/Testimonials";
 import Recognition from "@/components/home/Recognition";
 import FinalCTA from "@/components/home/FinalCTA";
-import { useEffect, useState } from "react";
-import { usePathname } from "next/navigation";
-import ContactModal from "@/components/ContactModal";
 export default function Home({ children }) {
-  const pathname = usePathname();
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  useEffect(() => {
-    setIsModalOpen(true);
-  }, [pathname]);
   return (
     <main className="min-h-screen">
       <Navbar />
@@ -34,10 +26,20 @@ export default function Home({ children }) {
       <FinalCTA />
       <Footer />
 
-      <ContactModal
+      {/* <ContactModal
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
-      />
+      /> */}
     </main>
   );
 }
+
+// import { useEffect, useState } from "react";
+// import { usePathname } from "next/navigation";
+// import ContactModal from "@/components/ContactModal";
+//
+//   const pathname = usePathname();
+//   const [isModalOpen, setIsModalOpen] = useState(false);
+//   useEffect(() => {
+//     setIsModalOpen(true);
+//   }, [pathname]);

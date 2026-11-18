@@ -60,7 +60,7 @@ const slides = [
     button1: "Talk to an Expert",
     button2: "Call Now",
     link1: "/contact",
-    link2: "/contact",
+    link2: "tel:+923070474920",
   },
 ];
 

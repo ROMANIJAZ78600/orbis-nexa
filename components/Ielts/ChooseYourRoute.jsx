@@ -58,17 +58,17 @@ export default function ChooseYourRoute() {
       </p>
 
       <div className="lg:w-[90%] mx-auto lg:h-100 h-180 bg-gradient-to-br from-[#0265aa] via-[#004d85] to-[#001f3f] mt-10 rounded-[20px]">
-        <p className="text-xs p-2 bg-orange-400/80 w-27 lg:w-30 rounded-tl-[20px] rounded-br-[20px] font-bold">
+        <p className="text-xs p-2 bg-blue-400/80 w-27 lg:w-30 rounded-tl-[20px] rounded-br-[20px] font-bold">
           MOST POPULAR
         </p>
 
         <div className="flex lg:flex-row flex-col justify-between gap-3">
           <div className="flex gap-3 items-center p-10 lg:mt-15">
-            <span className="bg-green-400  lg:px-5 p-3 rounded-[20px] font-bold lg:text-xl">
+            <span className="bg-black text-blue-400 h-10 flex items-center  lg:px-5 p-3 rounded-[20px] font-bold lg:text-xl">
               A
             </span>
             <div className="flex flex-col gap-5">
-              <span className="tracking-wide font-bold text-orange-400/80 text-sm">
+              <span className="tracking-wide font-bold text-blue-400/80 text-sm">
                 Study Abroad
               </span>
               <span className="text-white text-3xl font-bold">
@@ -79,20 +79,20 @@ export default function ChooseYourRoute() {
                 admission and professional registration.
               </p>
               <div className="flex lg:flex-row flex-col gap-5 items-center mt-5 mr-20">
-                <p className="text-[7px] lg:w-40 w-30  lg:text-xs border-1 border-black/50 p-2 rounded-full text-white">
+                <p className="text-[7px] lg:w-40 w-30  lg:text-xs bg-white/20 border-1 border-white/50  p-2 rounded-full text-white">
                   Data & diagram writing
                 </p>
-                <p className="text-[7px] lg:w-45 w-30  lg:text-xs border-1 border-black/50 p-2 rounded-full text-white">
+                <p className="text-[7px] lg:w-45 w-30  lg:text-xs bg-white/20 border-1 border-white/50  p-2 rounded-full text-white">
                   Academic reading strategies
                 </p>
-                <p className="text-[7px] lg:w-40 w-30  lg:text-xs border-1 border-black/50 p-2 rounded-full text-white">
+                <p className="text-[7px] lg:w-40 w-30  lg:text-xs bg-white/20 border-1 border-white/50  p-2 rounded-full text-white">
                   Speaking confidence
                 </p>
               </div>
             </div>
           </div>
 
-          <div className="bg-white/40 h-45 w-45 lg:mr-20 lg:mt-20 rounded-[20px] relative lg:left-0 left-20 flex flex-col justify-center">
+          <div className="bg-white/40 rotate-1 h-45 w-45 lg:mr-20 lg:mt-20 rounded-[20px] relative lg:left-0 left-20 flex flex-col justify-center">
             <span className="text-center text-sm">Common Target</span>
             <span className="text-center text-3xl font-bold text-white">
               6.0-7.8+
@@ -110,13 +110,13 @@ export default function ChooseYourRoute() {
       transition-all duration-300"
           >
             <div
-              className="w-12 h-12 rounded-2xl bg-[#9BF568]
+              className="w-12 h-12 rounded-2xl bg-black text-blue-400
         flex items-center justify-center text-xl font-bold mb-3"
             >
               {item.icon}
             </div>
 
-            <p className="text-[9px] font-bold tracking-[2px] text-orange-500 mb-2">
+            <p className="text-[9px] font-bold tracking-[2px] text-blue-500 mb-2">
               {item.tag}
             </p>
 

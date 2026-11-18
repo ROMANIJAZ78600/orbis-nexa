@@ -27,14 +27,15 @@ const countries = [
   { name: "Canada", code: "ca" },
   { name: "Australia", code: "au" },
   { name: "Germany", code: "de" },
-  { name: "Japan", code: "jp" },
-  { name: "Brazil", code: "br" },
-  { name: "South Africa", code: "za" },
+  { name: "Italy", code: "it" },
+  { name: "France", code: "fr" },
+  { name: "Finland", code: "fi" },
+  { name: "Swedan", code: "se" },
 ];
 
 // MOBILE QUICK LINKS
 const mobileLinks = [
-  { name: "Search", href: "/search", icon: Search },
+  { name: "Search", href: "/", icon: Search },
   { name: "Destinations", href: "/destinations", icon: Flag },
 ];
 
@@ -248,92 +249,99 @@ export default function Navbar() {
             >
               {/* MOBILE NAVIGATION */}
               <div className="flex flex-col">
-                {navLinks.map((link, index) => (
-                  <motion.div
-                    key={link.name}
-                    initial={{ opacity: 0, x: -15 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{
-                      delay: index * 0.07,
-                      duration: 0.3,
-                    }}
-                  >
-                    {link.dropdown ? (
-                      <div className="border-b border-black/10">
-                        {/* DESTINATIONS BUTTON */}
-                        <button
-                          onClick={() =>
-                            setMobileDropdownOpen(!mobileDropdownOpen)
-                          }
-                          className={`flex items-center justify-between border-b border-black/10 py-4 text-base font-medium transition-colors hover:text-[#0265AA] ${
-                            pathname === link.href ||
-                            (link.href !== "/" &&
-                              pathname.startsWith(link.href + "/"))
-                              ? "text-[#0265AA]"
-                              : "text-black/65"
+                {navLinks.map((link, index) => {
+                  const isActive =
+                    pathname === link.href ||
+                    (link.href !== "/" && pathname.startsWith(link.href));
+
+                  return (
+                    <motion.div
+                      key={link.name}
+                      initial={{ opacity: 0, x: -15 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{
+                        delay: index * 0.07,
+                        duration: 0.3,
+                      }}
+                    >
+                      {link.dropdown ? (
+                        <div className="border-b border-black/10">
+                          {/* DESTINATIONS BUTTON - Chevron attached to Destination text */}
+                          <button
+                            onClick={() =>
+                              setMobileDropdownOpen(!mobileDropdownOpen)
+                            }
+                            className={`flex w-full items-center justify-between border-b border-black/10 py-4 text-base font-medium transition-colors ${
+                              isActive || pathname.startsWith("/destinations")
+                                ? "text-[#0265AA]"
+                                : "text-black/65"
+                            }`}
+                          >
+                            <span className="flex items-center gap-45">
+                              {link.name}
+                              <motion.div
+                                animate={{
+                                  rotate: mobileDropdownOpen ? 180 : 0,
+                                }}
+                                transition={{ duration: 0.3 }}
+                              >
+                                <ChevronDown size={17} />
+                              </motion.div>
+                            </span>
+                          </button>
+
+                          {/* MOBILE COUNTRIES */}
+                          <AnimatePresence>
+                            {mobileDropdownOpen && (
+                              <motion.div
+                                initial={{ height: 0, opacity: 0 }}
+                                animate={{ height: "auto", opacity: 1 }}
+                                exit={{ height: 0, opacity: 0 }}
+                                transition={{ duration: 0.3 }}
+                                className="overflow-hidden"
+                              >
+                                <div className="grid grid-cols-2 gap-2 pb-4 pt-2">
+                                  {countries.map((country) => (
+                                    <Link
+                                      key={country.code}
+                                      href={`/destinations/${country.code}`}
+                                      onClick={closeMenu}
+                                      className="flex items-center gap-2 rounded-lg bg-gray-50 px-2 py-3 text-xs font-medium text-black/70 transition hover:bg-[#dcfcc6]"
+                                    >
+                                      <img
+                                        src={`https://flagcdn.com/w40/${country.code}.png`}
+                                        alt={`${country.name} flag`}
+                                        className="h-4 w-6 rounded-sm object-cover"
+                                      />
+
+                                      {country.name}
+
+                                      <ArrowUpRight
+                                        size={13}
+                                        className="ml-auto shrink-0 opacity-40"
+                                      />
+                                    </Link>
+                                  ))}
+                                </div>
+                              </motion.div>
+                            )}
+                          </AnimatePresence>
+                        </div>
+                      ) : (
+                        <Link
+                          href={link.href}
+                          onClick={closeMenu}
+                          className={`flex items-center justify-between border-b border-black/10 py-4 text-base font-medium transition-colors ${
+                            isActive ? "text-[#0265AA]" : "text-black/65"
                           }`}
                         >
                           {link.name}
-
-                          <motion.div
-                            animate={{
-                              rotate: mobileDropdownOpen ? 180 : 0,
-                            }}
-                            transition={{ duration: 0.3 }}
-                          >
-                            <ChevronDown size={19} />
-                          </motion.div>
-                        </button>
-
-                        {/* MOBILE COUNTRIES */}
-                        <AnimatePresence>
-                          {mobileDropdownOpen && (
-                            <motion.div
-                              initial={{ height: 0, opacity: 0 }}
-                              animate={{ height: "auto", opacity: 1 }}
-                              exit={{ height: 0, opacity: 0 }}
-                              transition={{ duration: 0.3 }}
-                              className="overflow-hidden"
-                            >
-                              <div className="grid grid-cols-2 gap-2 pb-4">
-                                {countries.map((country) => (
-                                  <Link
-                                    key={country.code}
-                                    href={`/destinations/${country.code}`}
-                                    onClick={closeMenu}
-                                    className="flex items-center gap-2 rounded-lg bg-gray-50 px-2 py-3 text-xs font-medium text-black/70 transition hover:bg-[#dcfcc6]"
-                                  >
-                                    <img
-                                      src={`https://flagcdn.com/w40/${country.code}.png`}
-                                      alt={`${country.name} flag`}
-                                      className="h-4 w-6 rounded-sm object-cover"
-                                    />
-
-                                    {country.name}
-
-                                    <ArrowUpRight
-                                      size={13}
-                                      className="ml-auto shrink-0 opacity-40"
-                                    />
-                                  </Link>
-                                ))}
-                              </div>
-                            </motion.div>
-                          )}
-                        </AnimatePresence>
-                      </div>
-                    ) : (
-                      <Link
-                        href={link.href}
-                        onClick={closeMenu}
-                        className="flex items-center justify-between border-b border-black/10 py-4 text-base font-medium text-black/65 transition-colors hover:text-black"
-                      >
-                        {link.name}
-                        <ArrowUpRight size={17} />
-                      </Link>
-                    )}
-                  </motion.div>
-                ))}
+                          <ArrowUpRight size={17} />
+                        </Link>
+                      )}
+                    </motion.div>
+                  );
+                })}
               </div>
 
               {/* MOBILE QUICK LINKS */}
@@ -345,7 +353,15 @@ export default function Navbar() {
                     <Link
                       key={item.name}
                       href={item.href}
-                      onClick={closeMenu}
+                      onClick={(e) => {
+                        if (item.name === "Search") {
+                          e.preventDefault(); // Agar search page par redirect nahi hone dena aur sirf modal kholna hai
+                          setIsSearchOpen(true);
+                          closeMenu();
+                        } else {
+                          closeMenu();
+                        }
+                      }}
                       className="flex items-center gap-2 rounded-xl border border-black/10 bg-gray-50 p-3 text-xs text-black/65 transition hover:bg-[#dcfcc6]"
                     >
                       <Icon size={16} />

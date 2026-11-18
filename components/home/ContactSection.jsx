@@ -11,6 +11,7 @@ import {
   Star,
   ShieldCheck,
 } from "lucide-react";
+import { useState } from "react";
 
 const steps = [
   {
@@ -56,6 +57,54 @@ const selectClass =
   "w-full min-w-0 appearance-none rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-sm text-gray-600 outline-none transition-all duration-200 focus:border-[#0265AA] focus:bg-white focus:ring-4 focus:ring-[#0265AA]/10";
 
 export default function ContactSection() {
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    email: "",
+    country: "",
+    city: "",
+    Branch: "",
+    lastQualification: "",
+    CompletionYear: "",
+    CGPA: "",
+    IELTSScore: "",
+    intake: "",
+    Support: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const phoneNumber = "923070474920";
+
+    const text = `*New Study Abroad Enquiry*%0A
+*Personal Information*%0A
+*Name:* ${formData.name}%0A
+*Phone:* ${formData.phone}%0A
+*Email:* ${formData.email}%0A
+*Study Preference*%0A
+*Where Do You Want to Study?* ${formData.country}%0A
+*Current City:* ${formData.city}%0A
+*Branch:* ${formData.Branch}%0A
+*Academic Information*%0A
+*Last Qualification:* ${formData.lastQualification}%0A
+*Completion Year:* ${formData.CompletionYear}%0A
+*CGPA / Percentage:* ${formData.CGPA}%0A
+*IELTS / PTE Score:* ${formData.IELTSScore}%0A
+*Application Details*%0A
+*Target Intake:* ${formData.intake}%0A
+*What Support Do You Need?:* ${formData.Support}%0A
+*Message:* ${formData.message}`;
+
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${text}`;
+    window.open(whatsappURL, "_blank");
+  };
   return (
     <section className="relative overflow-hidden bg-gradient-to-bl from-blue via-blue-50 to-blue px-4 py-16 sm:px-6 lg:px-12 lg:py-24">
       {/* Background Decoration */}
@@ -165,7 +214,7 @@ export default function ContactSection() {
           </div>
 
           <form
-            onSubmit={(e) => e.preventDefault()}
+            onSubmit={handleSubmit}
             className="relative flex flex-col gap-6 p-5 sm:p-8 lg:p-9"
           >
             {/* Form Header */}
@@ -194,6 +243,8 @@ export default function ContactSection() {
               <input
                 type="text"
                 name="name"
+                value={formData.name}
+                onChange={handleChange}
                 placeholder="Full Name *"
                 required
                 className={inputClass}
@@ -207,6 +258,8 @@ export default function ContactSection() {
                 <input
                   type="tel"
                   name="phone"
+                  value={formData.phone}
+                  onChange={handleChange}
                   placeholder="Phone Number *"
                   required
                   className={inputClass}
@@ -216,6 +269,8 @@ export default function ContactSection() {
               <input
                 type="email"
                 name="email"
+                value={formData.email}
+                onChange={handleChange}
                 placeholder="Email Address *"
                 required
                 className={inputClass}
@@ -230,33 +285,38 @@ export default function ContactSection() {
 
               <select
                 name="country"
-                defaultValue=""
+                value={formData.country}
+                onChange={handleChange}
                 required
                 className={selectClass}
               >
                 <option value="" disabled>
                   Where Do You Want to Study? *
                 </option>
-                <option value="us">United States</option>
-                <option value="gb">United Kingdom</option>
-                <option value="ca">Canada</option>
-                <option value="au">Australia</option>
-                <option value="de">Germany</option>
-                <option value="jp">Japan</option>
+                <option value="United States">United States</option>
+                <option value="United Kingdom">United Kingdom</option>
+                <option value="Canada">Canada</option>
+                <option value="Australia">Australia</option>
+                <option value="Germany">Germany</option>
+                <option value="France">France</option>
+                <option value="Italy">Italy</option>
               </select>
 
               <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
                 <input
                   type="text"
                   name="city"
+                  value={formData.city}
+                  onChange={handleChange}
                   placeholder="Current City *"
                   required
                   className={inputClass}
                 />
 
                 <select
-                  name="branch"
-                  defaultValue=""
+                  name="Branch"
+                  value={formData.Branch}
+                  onChange={handleChange}
                   required
                   className={selectClass}
                 >
@@ -275,26 +335,31 @@ export default function ContactSection() {
               </h4>
 
               <select
-                name="qualification"
-                defaultValue=""
+                name="lastQualification"
+                value={formData.lastQualification}
+                onChange={handleChange}
                 required
                 className={selectClass}
               >
                 <option value="" disabled>
                   Last Qualification *
                 </option>
-                <option value="matric">Matric / O Level</option>
-                <option value="intermediate">Intermediate / A Level</option>
-                <option value="diploma">Diploma</option>
-                <option value="bachelor">Bachelor's Degree</option>
-                <option value="master">Master's Degree</option>
+                <option value="Matric / O Level">Matric / O Level</option>
+                <option value="Intermediate / A Level">
+                  Intermediate / A Level
+                </option>
+                <option value="Diploma">Diploma</option>
+                <option value="Bachelor's Degree">Bachelor's Degree</option>
+                <option value="Master's Degree">Master's Degree</option>
                 <option value="other">Other</option>
               </select>
 
               <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
                 <input
                   type="number"
-                  name="completionYear"
+                  name="CompletionYear"
+                  value={formData.CompletionYear}
+                  onChange={handleChange}
                   placeholder="Completion Year *"
                   required
                   className={inputClass}
@@ -302,14 +367,18 @@ export default function ContactSection() {
 
                 <input
                   type="text"
-                  name="cgpa"
+                  name="CGPA"
+                  value={formData.CGPA}
+                  onChange={handleChange}
                   placeholder="CGPA / Percentage"
                   className={inputClass}
                 />
 
                 <input
                   type="text"
-                  name="englishScore"
+                  name="IELTSScore"
+                  value={formData.IELTSScore}
+                  onChange={handleChange}
                   placeholder="IELTS / PTE Score"
                   className={`${inputClass} sm:col-span-2`}
                 />
@@ -324,7 +393,8 @@ export default function ContactSection() {
 
               <select
                 name="intake"
-                defaultValue=""
+                value={formData.intake}
+                onChange={handleChange}
                 required
                 className={selectClass}
               >
@@ -335,12 +405,13 @@ export default function ContactSection() {
                 <option value="may-2027">May 2027</option>
                 <option value="sep-2027">September 2027</option>
                 <option value="jan-2028">January 2028</option>
-                <option value="undecided">Not Decided</option>
+                <option value="Not Decided">Not Decided</option>
               </select>
 
               <select
-                name="support"
-                defaultValue=""
+                name="Support"
+                value={formData.Support}
+                onChange={handleChange}
                 required
                 className={selectClass}
               >
@@ -356,6 +427,8 @@ export default function ContactSection() {
 
               <textarea
                 name="message"
+                value={formData.message}
+                onChange={handleChange}
                 placeholder="Tell us briefly about your study plans..."
                 rows={4}
                 className={`${inputClass} resize-none`}

@@ -72,7 +72,7 @@ export default function Faqs() {
                   Discuss your study plans with a Orbis Nexa counsellor.
                 </p>
                 <Link
-                  href="/"
+                  href="/contact"
                   className="bg-[#0265aa] p-3 lg:w-[65%] w-[77%] text-gray-200 flex gap-0.5 rounded-full shadow-md hover:scale-95 active:scale-80 hover:shadow-blue-600 active:shadow-blue-600 duration-300"
                 >
                   Book Free Consultation <ArrowRight />
