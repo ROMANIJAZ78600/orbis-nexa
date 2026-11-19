@@ -8,69 +8,317 @@ const countries = [
   { name: "Canada", code: "ca" },
   { name: "Australia", code: "au" },
   { name: "Germany", code: "de" },
-  { name: "Japan", code: "jp" },
-  { name: "Brazil", code: "br" },
-  { name: "South Africa", code: "za" },
+  { name: "Italy", code: "it" },
+  { name: "France", code: "fr" },
+  { name: "Fin Land", code: "fi" },
+  { name: "Swedan", code: "se" },
 ];
 
 const Universities = [
-  {
-    name: "University Of Melbourne",
-    country: "Australia",
-    logo: "https://www.google.com/s2/favicons?domain=unimelb.edu.au&sz=128",
-  },
+  // United States
   {
     name: "Harvard University",
     country: "United States",
+    code: "us",
     logo: "https://www.google.com/s2/favicons?domain=harvard.edu&sz=128",
   },
   {
     name: "Stanford University",
     country: "United States",
+    code: "us",
     logo: "https://www.google.com/s2/favicons?domain=stanford.edu&sz=128",
   },
   {
     name: "MIT",
     country: "United States",
+    code: "us",
     logo: "https://www.google.com/s2/favicons?domain=mit.edu&sz=128",
   },
   {
     name: "Yale University",
     country: "United States",
+    code: "us",
     logo: "https://www.google.com/s2/favicons?domain=yale.edu&sz=128",
   },
   {
     name: "Princeton University",
     country: "United States",
+    code: "us",
     logo: "https://www.google.com/s2/favicons?domain=princeton.edu&sz=128",
   },
   {
     name: "Columbia University",
     country: "United States",
+    code: "us",
     logo: "https://www.google.com/s2/favicons?domain=columbia.edu&sz=128",
   },
-  //   United Kingdom
+  {
+    name: "University of California, Berkeley",
+    country: "United States",
+    code: "us",
+    logo: "https://www.google.com/s2/favicons?domain=berkeley.edu&sz=128",
+  },
+
+  // United Kingdom
   {
     name: "University of Oxford",
     country: "United Kingdom",
+    code: "gb",
     logo: "https://www.google.com/s2/favicons?domain=ox.ac.uk&sz=128",
   },
   {
     name: "University of Cambridge",
     country: "United Kingdom",
+    code: "gb",
     logo: "https://www.google.com/s2/favicons?domain=cambridge.ac.uk&sz=128",
+  },
+  {
+    name: "Imperial College London",
+    country: "United Kingdom",
+    code: "gb",
+    logo: "https://www.google.com/s2/favicons?domain=imperial.ac.uk&sz=128",
+  },
+  {
+    name: "University College London",
+    country: "United Kingdom",
+    code: "gb",
+    logo: "https://www.google.com/s2/favicons?domain=ucl.ac.uk&sz=128",
+  },
+  {
+    name: "University of Edinburgh",
+    country: "United Kingdom",
+    code: "gb",
+    logo: "https://www.google.com/s2/favicons?domain=ed.ac.uk&sz=128",
   },
   {
     name: "University of Leeds",
     country: "United Kingdom",
+    code: "gb",
     logo: "https://www.google.com/s2/favicons?domain=leeds.ac.uk&sz=128",
   },
 
-  //   Canada
+  // Canada
   {
     name: "University of Toronto",
     country: "Canada",
+    code: "ca",
     logo: "https://www.google.com/s2/favicons?domain=utoronto.ca&sz=128",
+  },
+  {
+    name: "University of British Columbia",
+    country: "Canada",
+    code: "ca",
+    logo: "https://www.google.com/s2/favicons?domain=ubc.ca&sz=128",
+  },
+  {
+    name: "McGill University",
+    country: "Canada",
+    code: "ca",
+    logo: "https://www.google.com/s2/favicons?domain=mcgill.ca&sz=128",
+  },
+  {
+    name: "University of Waterloo",
+    country: "Canada",
+    code: "ca",
+    logo: "https://www.google.com/s2/favicons?domain=uwaterloo.ca&sz=128",
+  },
+  {
+    name: "University of Alberta",
+    country: "Canada",
+    code: "ca",
+    logo: "https://www.google.com/s2/favicons?domain=ualberta.ca&sz=128",
+  },
+
+  // Australia
+  {
+    name: "University Of Melbourne",
+    country: "Australia",
+    code: "au",
+    logo: "https://www.google.com/s2/favicons?domain=unimelb.edu.au&sz=128",
+  },
+  {
+    name: "The University of Sydney",
+    country: "Australia",
+    code: "au",
+    logo: "https://www.google.com/s2/favicons?domain=sydney.edu.au&sz=128",
+  },
+  {
+    name: "The Australian National University",
+    country: "Australia",
+    code: "au",
+    logo: "https://www.google.com/s2/favicons?domain=anu.edu.au&sz=128",
+  },
+  {
+    name: "UNSW Sydney",
+    country: "Australia",
+    code: "au",
+    logo: "https://www.google.com/s2/favicons?domain=unsw.edu.au&sz=128",
+  },
+  {
+    name: "Monash University",
+    country: "Australia",
+    code: "au",
+    logo: "https://www.google.com/s2/favicons?domain=monash.edu&sz=128",
+  },
+
+  // Germany
+  {
+    name: "Technical University of Munich",
+    country: "Germany",
+    code: "de",
+    logo: "https://www.google.com/s2/favicons?domain=tum.de&sz=128",
+  },
+  {
+    name: "LMU Munich",
+    country: "Germany",
+    code: "de",
+    logo: "https://www.google.com/s2/favicons?domain=lmu.de&sz=128",
+  },
+  {
+    name: "Heidelberg University",
+    country: "Germany",
+    code: "de",
+    logo: "https://www.google.com/s2/favicons?domain=uni-heidelberg.de&sz=128",
+  },
+  {
+    name: "Humboldt University of Berlin",
+    country: "Germany",
+    code: "de",
+    logo: "https://www.google.com/s2/favicons?domain=hu-berlin.de&sz=128",
+  },
+  {
+    name: "RWTH Aachen University",
+    country: "Germany",
+    code: "de",
+    logo: "https://www.google.com/s2/favicons?domain=rwth-aachen.de&sz=128",
+  },
+
+  // Italy
+  {
+    name: "University of Bologna",
+    country: "Italy",
+    code: "it",
+    logo: "https://www.google.com/s2/favicons?domain=unibo.it&sz=128",
+  },
+  {
+    name: "Politecnico di Milano",
+    country: "Italy",
+    code: "it",
+    logo: "https://www.google.com/s2/favicons?domain=polimi.it&sz=128",
+  },
+  {
+    name: "Sapienza University of Rome",
+    country: "Italy",
+    code: "it",
+    logo: "https://www.google.com/s2/favicons?domain=uniroma1.it&sz=128",
+  },
+  {
+    name: "University of Padua",
+    country: "Italy",
+    code: "it",
+    logo: "https://www.google.com/s2/favicons?domain=unipd.it&sz=128",
+  },
+  {
+    name: "Politecnico di Torino",
+    country: "Italy",
+    code: "it",
+    logo: "https://www.google.com/s2/favicons?domain=polito.it&sz=128",
+  },
+
+  // France
+  {
+    name: "Université PSL",
+    country: "France",
+    code: "fr",
+    logo: "https://www.google.com/s2/favicons?domain=psl.eu&sz=128",
+  },
+  {
+    name: "Institut Polytechnique de Paris",
+    country: "France",
+    code: "fr",
+    logo: "https://www.google.com/s2/favicons?domain=ip-paris.fr&sz=128",
+  },
+  {
+    name: "Sorbonne Université",
+    country: "France",
+    code: "fr",
+    logo: "https://www.google.com/s2/favicons?domain=sorbonne-universite.fr&sz=128",
+  },
+  {
+    name: "HEC Paris",
+    country: "France",
+    code: "fr",
+    logo: "https://www.google.com/s2/favicons?domain=hec.edu&sz=128",
+  },
+  {
+    name: "Université Paris-Saclay",
+    country: "France",
+    code: "fr",
+    logo: "https://www.google.com/s2/favicons?domain=universite-paris-saclay.fr&sz=128",
+  },
+
+  // Fin Land
+  {
+    name: "University of Helsinki",
+    country: "Fin Land",
+    code: "fi",
+    logo: "https://www.google.com/s2/favicons?domain=helsinki.fi&sz=128",
+  },
+  {
+    name: "Aalto University",
+    country: "Fin Land",
+    code: "fi",
+    logo: "https://www.google.com/s2/favicons?domain=aalto.fi&sz=128",
+  },
+  {
+    name: "University of Turku",
+    country: "Fin Land",
+    code: "fi",
+    logo: "https://www.google.com/s2/favicons?domain=utu.fi&sz=128",
+  },
+  {
+    name: "Tampere University",
+    country: "Fin Land",
+    code: "fi",
+    logo: "https://www.google.com/s2/favicons?domain=tuni.fi&sz=128",
+  },
+  {
+    name: "University of Oulu",
+    country: "Fin Land",
+    code: "fi",
+    logo: "https://www.google.com/s2/favicons?domain=oulu.fi&sz=128",
+  },
+
+  // Swedan
+  {
+    name: "KTH Royal Institute of Technology",
+    country: "Swedan",
+    code: "se",
+    logo: "https://www.google.com/s2/favicons?domain=kth.se&sz=128",
+  },
+  {
+    name: "Lund University",
+    country: "Swedan",
+    code: "se",
+    logo: "https://www.google.com/s2/favicons?domain=lu.se&sz=128",
+  },
+  {
+    name: "Uppsala University",
+    country: "Swedan",
+    code: "se",
+    logo: "https://www.google.com/s2/favicons?domain=uu.se&sz=128",
+  },
+  {
+    name: "Chalmers University of Technology",
+    country: "Swedan",
+    code: "se",
+    logo: "https://www.google.com/s2/favicons?domain=chalmers.se&sz=128",
+  },
+  {
+    name: "Stockholm University",
+    country: "Swedan",
+    code: "se",
+    logo: "https://www.google.com/s2/favicons?domain=su.se&sz=128",
   },
 ];
 

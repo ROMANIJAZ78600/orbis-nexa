@@ -1,6 +1,6 @@
 export default function Recognition() {
   return (
-    <section className="relative w-full bg-gradient-to-br from-[#0265aa] via-blue-500 to-[#0265aa] py-16 px-4 sm:px-6 lg:px-12">
+    <section className="relative w-full bg-gradient-to-br from-[#0265aa] via-[#004d85] to-[#001f3f] py-16 px-4 sm:px-6 lg:px-12">
       <div className="bg-black/10  border-1 border-black/20 lg:w-[80%] w-full h-full mx-auto rounded-[15px]">
         <div className="p-10">
           <h2 className="lg:text-4xl text-xl text-white/90">

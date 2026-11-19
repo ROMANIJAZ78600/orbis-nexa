@@ -28,7 +28,7 @@ const carddata = [
     li3: "Speaking mock sessions",
     li4: "Timed full mock tests",
     fee: "Ask For Current Fee",
-    btn: "Check Suitability",
+    btn: "Reserve Assesment",
   },
   {
     week: "8",
@@ -40,7 +40,7 @@ const carddata = [
     li3: "Weekly progress analytics",
     li4: "Final readiness review",
     fee: "Ask For Current Fee",
-    btn: "Check Suitability",
+    btn: "Discuss my plan",
   },
 ];
 
@@ -124,9 +124,11 @@ export default function Preparation() {
               <div className="mt-5 border-t flex flex-col gap-3 border-black/20 pt-5">
                 <span className="text-xs text-blue-400">FEE</span>
                 <span className="font-bold text-lg">{card.fee}</span>
-                <button className="flex gap-3 text-xs">
-                  {card.btn} <ArrowRight size={15} />
-                </button>
+                <a href="#Assesment">
+                  <button className="flex gap-3 text-xs">
+                    {card.btn} <ArrowRight size={15} />
+                  </button>
+                </a>
               </div>
             </div>
           );

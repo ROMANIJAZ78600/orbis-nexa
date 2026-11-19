@@ -49,7 +49,6 @@ export const getCountryData = (code) => {
         { title: "Law & Social Sciences", active: true },
         { title: "Creative Arts & Media", active: false },
       ],
-      // Add to your country object (e.g., inside 'gb', 'us', 'ca', etc.)
       studyPathwaysHeading: "STUDY PATHWAYS",
       studyPathways: [
         {
@@ -178,7 +177,6 @@ export const getCountryData = (code) => {
         { title: "Law & Social Sciences", active: true },
         { title: "Creative Arts & Media", active: false },
       ],
-      // Add to your country object (e.g., inside 'gb', 'us', 'ca', etc.)
       studyPathwaysHeading: "STUDY PATHWAYS",
       studyPathways: [
         {
@@ -207,7 +205,6 @@ export const getCountryData = (code) => {
         { name: "University of Edinburgh", location: "Edinburgh, Scotland" },
         { name: "King's College London", location: "London, England" },
       ],
-
       visaHeading: "VISA & ENTRY REQUIREMENTS",
       visaTitle: "UK Student Visa requirements at a glance.",
       visaSubtitle:
@@ -333,7 +330,6 @@ export const getCountryData = (code) => {
         { title: "Law & Social Sciences", active: true },
         { title: "Creative Arts & Media", active: false },
       ],
-      // Add to your country object (e.g., inside 'gb', 'us', 'ca', etc.)
       studyPathwaysHeading: "STUDY PATHWAYS",
       studyPathways: [
         {
@@ -362,7 +358,60 @@ export const getCountryData = (code) => {
         },
         { name: "McGill University", location: "Montreal, Quebec" },
         { name: "University of Waterloo", location: "Waterloo, Ontario" },
+        { name: "University of Alberta", location: "Edmonton, Alberta" },
       ],
+      visaHeading: "VISA & ENTRY REQUIREMENTS",
+      visaTitle: "Canada Study Permit requirements at a glance.",
+      visaSubtitle:
+        "Plan your Canadian study permit application with clarity on acceptance letters, financial proof, and biometric steps.",
+      visaRoute: {
+        title: "A clear route from acceptance to permit",
+        desc: "Receive a Letter of Acceptance from a Designated Learning Institution (DLI), obtain a Provincial Attestation Letter (PAL) where required, and submit your study permit application.",
+      },
+      visaRows: [
+        { label: "Visa type", value: "Canadian Study Permit" },
+        { label: "Permit fee", value: "$150 CAD per applicant" },
+        { label: "Biometrics fee", value: "$85 CAD (where applicable)" },
+        {
+          label: "Financial proof",
+          value:
+            "Demonstrate sufficient funds for first-year tuition, living expenses, and return travel",
+        },
+        {
+          label: "Work rights",
+          value:
+            "Eligible full-time students may work off-campus up to 24 hours per week during academic sessions",
+        },
+        {
+          label: "Post-Graduation Work",
+          value:
+            "Eligible graduates from DLI programs may apply for a Post-Graduation Work Permit (PGWP)",
+        },
+      ],
+      checklist: [
+        {
+          step: "01",
+          title: "DLI Acceptance & PAL",
+          desc: "Letter of Acceptance from a Designated Learning Institution and Provincial Attestation Letter where required.",
+        },
+        {
+          step: "02",
+          title: "Valid Passport",
+          desc: "Passport valid for the intended duration of your stay in Canada.",
+        },
+        {
+          step: "03",
+          title: "Proof of Funds",
+          desc: "Bank statements, GIC (Guaranteed Investment Certificate), or financial support documents.",
+        },
+        {
+          step: "04",
+          title: "Medical & Biometrics",
+          desc: "Biometrics enrolment and medical examination if required for your country or program.",
+        },
+      ],
+      importantNote:
+        "Study permit rules, financial thresholds, work hour limits, and PGWP eligibility can change. Always confirm current IRCC requirements before applying.",
     },
     au: {
       name: "Australia",
@@ -406,7 +455,6 @@ export const getCountryData = (code) => {
         { title: "Law & Social Sciences", active: true },
         { title: "Creative Arts & Media", active: false },
       ],
-      // Add to your country object (e.g., inside 'gb', 'us', 'ca', etc.)
       studyPathwaysHeading: "STUDY PATHWAYS",
       studyPathways: [
         {
@@ -426,6 +474,78 @@ export const getCountryData = (code) => {
           desc: "Explore supervisor, proposal and research-fit requirements for advanced study.",
         },
       ],
+      universitiesHeading: "LEADING AUSTRALIAN UNIVERSITIES",
+      universities: [
+        {
+          name: "The University of Melbourne",
+          location: "Melbourne, Victoria",
+        },
+        {
+          name: "The University of Sydney",
+          location: "Sydney, New South Wales",
+        },
+        {
+          name: "The Australian National University",
+          location: "Canberra, ACT",
+        },
+        { name: "UNSW Sydney", location: "Sydney, New South Wales" },
+        { name: "Monash University", location: "Melbourne, Victoria" },
+      ],
+      visaHeading: "VISA & ENTRY REQUIREMENTS",
+      visaTitle: "Australia Student Visa requirements at a glance.",
+      visaSubtitle:
+        "Plan your Subclass 500 student visa application with clarity on CoE, health cover, and financial requirements.",
+      visaRoute: {
+        title: "A clear route from offer to visa",
+        desc: "Accept your university offer to receive a Confirmation of Enrolment (CoE), arrange Overseas Student Health Cover (OSHC), and lodge your Subclass 500 application.",
+      },
+      visaRows: [
+        { label: "Visa type", value: "Student Visa (Subclass 500)" },
+        {
+          label: "Health cover",
+          value:
+            "Overseas Student Health Cover (OSHC) required for visa duration",
+        },
+        {
+          label: "Financial proof",
+          value:
+            "Evidence of genuine access to funds for tuition, living costs, travel, and dependents if any",
+        },
+        {
+          label: "Work rights",
+          value:
+            "Up to 48 hours per fortnight during study terms; unrestricted during scheduled breaks",
+        },
+        {
+          label: "Post-study options",
+          value:
+            "Temporary Graduate visa (Subclass 485) pathways for eligible degree graduates",
+        },
+      ],
+      checklist: [
+        {
+          step: "01",
+          title: "Confirmation of Enrolment (CoE)",
+          desc: "Official CoE issued by your registered Australian education provider.",
+        },
+        {
+          step: "02",
+          title: "OSHC & Passport",
+          desc: "Valid passport and Overseas Student Health Cover policy covering your stay.",
+        },
+        {
+          step: "03",
+          title: "Financial & Genuine Student",
+          desc: "Proof of funds and responses addressing genuine student requirements.",
+        },
+        {
+          step: "04",
+          title: "English & Health Checks",
+          desc: "Accepted English test results and medical/biometric checks where requested.",
+        },
+      ],
+      importantNote:
+        "Visa fees, genuine student criteria, work conditions, and graduate visa rules can change. Always confirm current Department of Home Affairs guidelines before applying.",
     },
     de: {
       name: "Germany",
@@ -469,7 +589,6 @@ export const getCountryData = (code) => {
         { title: "Law & Social Sciences", active: true },
         { title: "Creative Arts & Media", active: false },
       ],
-      // Add to your country object (e.g., inside 'gb', 'us', 'ca', etc.)
       studyPathwaysHeading: "STUDY PATHWAYS",
       studyPathways: [
         {
@@ -489,6 +608,79 @@ export const getCountryData = (code) => {
           desc: "Explore supervisor, proposal and research-fit requirements for advanced study.",
         },
       ],
+      universitiesHeading: "LEADING GERMAN UNIVERSITIES",
+      universities: [
+        { name: "Technical University of Munich", location: "Munich, Bavaria" },
+        { name: "LMU Munich", location: "Munich, Bavaria" },
+        {
+          name: "Heidelberg University",
+          location: "Heidelberg, Baden-Württemberg",
+        },
+        { name: "Humboldt University of Berlin", location: "Berlin" },
+        {
+          name: "RWTH Aachen University",
+          location: "Aachen, North Rhine-Westphalia",
+        },
+      ],
+      visaHeading: "VISA & ENTRY REQUIREMENTS",
+      visaTitle: "Germany Student Visa requirements at a glance.",
+      visaSubtitle:
+        "Plan your national student visa application with clarity on university admission, blocked account proof, and health insurance.",
+      visaRoute: {
+        title: "A clear route from admission to visa",
+        desc: "Secure university admission, open a blocked account (Sperrkonto) or provide equivalent funding proof, arrange health insurance, and apply for a national student visa.",
+      },
+      visaRows: [
+        {
+          label: "Visa type",
+          value: "National Student Visa (Visa for Study Purposes)",
+        },
+        { label: "Visa fee", value: "Typically €75 for adult applicants" },
+        {
+          label: "Financial proof",
+          value:
+            "Blocked account (Sperrkonto) covering required annual living expenses, or verified scholarship/sponsorship",
+        },
+        {
+          label: "Health insurance",
+          value:
+            "Statutory or qualifying private health insurance valid in Germany",
+        },
+        {
+          label: "Work rights",
+          value:
+            "Permitted working days/hours apply under current German immigration rules alongside studies",
+        },
+        {
+          label: "Post-study options",
+          value:
+            "Job-seeker residence permit options for eligible graduates of German universities",
+        },
+      ],
+      checklist: [
+        {
+          step: "01",
+          title: "University Admission",
+          desc: "Admission letter or conditional admission/language course confirmation from a German institution.",
+        },
+        {
+          step: "02",
+          title: "Blocked Account & Insurance",
+          desc: "Proof of blocked account funding and health insurance coverage.",
+        },
+        {
+          step: "03",
+          title: "Academic & Language Proof",
+          desc: "Prior transcripts/certificates and language proficiency evidence for the program.",
+        },
+        {
+          step: "04",
+          title: "Passport & Motivation",
+          desc: "Valid passport, application forms, and clear statement of study purpose.",
+        },
+      ],
+      importantNote:
+        "Blocked account amounts, visa procedures, and student work regulations can change. Always confirm current German mission and immigration requirements before applying.",
     },
     it: {
       name: "Italy",
@@ -532,7 +724,6 @@ export const getCountryData = (code) => {
         { title: "Law & Social Sciences", active: true },
         { title: "Creative Arts & Media", active: false },
       ],
-      // Add to your country object (e.g., inside 'gb', 'us', 'ca', etc.)
       studyPathwaysHeading: "STUDY PATHWAYS",
       studyPathways: [
         {
@@ -552,6 +743,69 @@ export const getCountryData = (code) => {
           desc: "Explore supervisor, proposal and research-fit requirements for advanced study.",
         },
       ],
+      universitiesHeading: "LEADING ITALIAN UNIVERSITIES",
+      universities: [
+        { name: "University of Bologna", location: "Bologna, Emilia-Romagna" },
+        { name: "Politecnico di Milano", location: "Milan, Lombardy" },
+        { name: "Sapienza University of Rome", location: "Rome, Lazio" },
+        { name: "University of Padua", location: "Padua, Veneto" },
+        { name: "Politecnico di Torino", location: "Turin, Piedmont" },
+      ],
+      visaHeading: "VISA & ENTRY REQUIREMENTS",
+      visaTitle: "Italy Student Visa requirements at a glance.",
+      visaSubtitle:
+        "Plan your Italian Type D study visa application with clarity on Universitaly pre-enrollment, housing, and financial proof.",
+      visaRoute: {
+        title: "A clear route from application to visa",
+        desc: "Complete your Universitaly application/pre-enrollment where required, prepare financial and accommodation proof, and apply for an Italian long-stay study visa.",
+      },
+      visaRows: [
+        { label: "Visa type", value: "Type D National Study Visa" },
+        {
+          label: "Financial proof",
+          value:
+            "Evidence of sufficient funds to support yourself throughout the academic year",
+        },
+        {
+          label: "Accommodation",
+          value:
+            "Proof of suitable housing or university accommodation in Italy",
+        },
+        {
+          label: "Health insurance",
+          value:
+            "Valid medical insurance meeting Italian consular requirements",
+        },
+        {
+          label: "Residence permit",
+          value:
+            "Apply for a Permesso di Soggiorno within 8 working days of arriving in Italy",
+        },
+      ],
+      checklist: [
+        {
+          step: "01",
+          title: "Admission & Pre-enrollment",
+          desc: "University admission confirmation and Universitaly pre-enrollment summary where applicable.",
+        },
+        {
+          step: "02",
+          title: "Financial & Housing Proof",
+          desc: "Bank statements/sponsorship documents and proof of accommodation in Italy.",
+        },
+        {
+          step: "03",
+          title: "Academic & Legalized Docs",
+          desc: "Diplomas, transcripts, and required translations or declarations of value/CIMEA checks.",
+        },
+        {
+          step: "04",
+          title: "Passport & Insurance",
+          desc: "Valid passport and qualifying health coverage.",
+        },
+      ],
+      importantNote:
+        "Consular checklists, pre-enrollment deadlines, and residence permit steps can vary by consulate. Always confirm official Italian embassy/consulate instructions before applying.",
     },
     fr: {
       name: "France",
@@ -595,7 +849,6 @@ export const getCountryData = (code) => {
         { title: "Law & Social Sciences", active: true },
         { title: "Creative Arts & Media", active: false },
       ],
-      // Add to your country object (e.g., inside 'gb', 'us', 'ca', etc.)
       studyPathwaysHeading: "STUDY PATHWAYS",
       studyPathways: [
         {
@@ -615,6 +868,71 @@ export const getCountryData = (code) => {
           desc: "Explore supervisor, proposal and research-fit requirements for advanced study.",
         },
       ],
+      universitiesHeading: "LEADING FRENCH UNIVERSITIES",
+      universities: [
+        {
+          name: "Université PSL (Paris Sciences & Lettres)",
+          location: "Paris",
+        },
+        { name: "Institut Polytechnique de Paris", location: "Palaiseau" },
+        { name: "Sorbonne Université", location: "Paris" },
+        { name: "HEC Paris", location: "Jouy-en-Josas" },
+        { name: "Université Paris-Saclay", location: "Gif-sur-Yvette" },
+      ],
+      visaHeading: "VISA & ENTRY REQUIREMENTS",
+      visaTitle: "France Student Visa requirements at a glance.",
+      visaSubtitle:
+        "Plan your French student visa application with clarity on admissions, living funds, and housing documentation.",
+      visaRoute: {
+        title: "A clear route from admission to visa",
+        desc: "Secure admission from a recognized French university or Grande École, complete any required campus/pre-consular steps, and submit your student visa application.",
+      },
+      visaRows: [
+        { label: "Visa type", value: "Long-Stay Student Visa (VLS-TS)" },
+        {
+          label: "Financial proof",
+          value:
+            "Evidence of sufficient monthly resources to cover living costs in France",
+        },
+        {
+          label: "Accommodation",
+          value: "Proof of housing in France for your arrival period",
+        },
+        {
+          label: "Work rights",
+          value:
+            "Student residence holders are permitted to work part-time up to statutory limits",
+        },
+        {
+          label: "Post-study options",
+          value:
+            "Temporary residence pathways available for eligible master’s and higher graduates",
+        },
+      ],
+      checklist: [
+        {
+          step: "01",
+          title: "Proof of Admission",
+          desc: "Official acceptance letter or enrollment confirmation from a French institution.",
+        },
+        {
+          step: "02",
+          title: "Financial & Housing Proof",
+          desc: "Proof of available funds and initial accommodation in France.",
+        },
+        {
+          step: "03",
+          title: "Academic & Language Records",
+          desc: "Prior degree/school certificates and language proficiency evidence where required.",
+        },
+        {
+          step: "04",
+          title: "Passport & Identity Docs",
+          desc: "Valid passport, visa application forms, and compliant photos.",
+        },
+      ],
+      importantNote:
+        "Visa procedures, financial proof requirements, and student rules can change. Always confirm current France-Visas and consular requirements before applying.",
     },
     fi: {
       name: "Finland",
@@ -658,7 +976,6 @@ export const getCountryData = (code) => {
         { title: "Law & Social Sciences", active: true },
         { title: "Creative Arts & Media", active: false },
       ],
-      // Add to your country object (e.g., inside 'gb', 'us', 'ca', etc.)
       studyPathwaysHeading: "STUDY PATHWAYS",
       studyPathways: [
         {
@@ -678,6 +995,69 @@ export const getCountryData = (code) => {
           desc: "Explore supervisor, proposal and research-fit requirements for advanced study.",
         },
       ],
+      universitiesHeading: "LEADING FINNISH UNIVERSITIES",
+      universities: [
+        { name: "University of Helsinki", location: "Helsinki" },
+        { name: "Aalto University", location: "Espoo, Greater Helsinki" },
+        { name: "University of Turku", location: "Turku" },
+        { name: "Tampere University", location: "Tampere" },
+        { name: "University of Oulu", location: "Oulu" },
+      ],
+      visaHeading: "VISA & ENTRY REQUIREMENTS",
+      visaTitle: "Finland Student Residence Permit at a glance.",
+      visaSubtitle:
+        "Plan your Finnish residence permit for studies with clarity on admission, income requirement, and insurance.",
+      visaRoute: {
+        title: "A clear route from admission to permit",
+        desc: "Receive your admission confirmation from a Finnish higher education institution, prepare proof of funds and insurance, and apply for a student residence permit (typically via Enter Finland).",
+      },
+      visaRows: [
+        { label: "Permit type", value: "Residence Permit for Studies (Migri)" },
+        {
+          label: "Financial proof",
+          value:
+            "Demonstrate sufficient funds in your own bank account to cover living costs for the required period",
+        },
+        {
+          label: "Tuition & scholarships",
+          value:
+            "Non-EU/EEA students may face tuition fees depending on program, with scholarship options available",
+        },
+        {
+          label: "Health insurance",
+          value:
+            "Private insurance covering medical/treatment costs meeting Migri thresholds",
+        },
+        {
+          label: "Work rights",
+          value:
+            "Students with a residence permit for studies have broad working rights subject to current law",
+        },
+      ],
+      checklist: [
+        {
+          step: "01",
+          title: "Admission Decision",
+          desc: "Official acceptance letter from a Finnish university or university of applied sciences.",
+        },
+        {
+          step: "02",
+          title: "Proof of Funds",
+          desc: "Bank statement showing required funds readily available in your account.",
+        },
+        {
+          step: "03",
+          title: "Valid Insurance",
+          desc: "Medical insurance policy meeting Finnish Immigration Service (Migri) criteria.",
+        },
+        {
+          step: "04",
+          title: "Passport & Biometrics",
+          desc: "Valid passport and identity verification/biometrics appointment.",
+        },
+      ],
+      importantNote:
+        "Income thresholds, tuition rules, and Migri permit requirements can change. Always confirm current Finnish Immigration Service (Migri) guidelines before applying.",
     },
     se: {
       name: "Sweden",
@@ -721,7 +1101,6 @@ export const getCountryData = (code) => {
         { title: "Law & Social Sciences", active: true },
         { title: "Creative Arts & Media", active: false },
       ],
-      // Add to your country object (e.g., inside 'gb', 'us', 'ca', etc.)
       studyPathwaysHeading: "STUDY PATHWAYS",
       studyPathways: [
         {
@@ -741,6 +1120,71 @@ export const getCountryData = (code) => {
           desc: "Explore supervisor, proposal and research-fit requirements for advanced study.",
         },
       ],
+      universitiesHeading: "LEADING SWEDISH UNIVERSITIES",
+      universities: [
+        { name: "KTH Royal Institute of Technology", location: "Stockholm" },
+        { name: "Lund University", location: "Lund, Skåne" },
+        { name: "Uppsala University", location: "Uppsala" },
+        { name: "Chalmers University of Technology", location: "Gothenburg" },
+        { name: "Stockholm University", location: "Stockholm" },
+      ],
+      visaHeading: "VISA & ENTRY REQUIREMENTS",
+      visaTitle: "Sweden Student Residence Permit at a glance.",
+      visaSubtitle:
+        "Plan your Swedish residence permit for higher education with clarity on admission, maintenance funds, and insurance.",
+      visaRoute: {
+        title: "A clear route from admission to permit",
+        desc: "Receive admission to full-time studies at a Swedish higher education institution, prepare proof of funds and comprehensive insurance, and apply via the Swedish Migration Agency (Migrationsverket).",
+      },
+      visaRows: [
+        {
+          label: "Permit type",
+          value: "Residence Permit for Higher Education (Migrationsverket)",
+        },
+        {
+          label: "Financial proof",
+          value:
+            "Demonstrate sufficient funds in your bank account to support yourself for the required period",
+        },
+        {
+          label: "Tuition payment",
+          value:
+            "Where tuition fees apply, payment or fee waiver/scholarship documentation is required",
+        },
+        {
+          label: "Health insurance",
+          value: "Comprehensive health insurance coverage valid in Sweden",
+        },
+        {
+          label: "Work rights",
+          value:
+            "Students with a residence permit for higher education are generally allowed to work alongside studies",
+        },
+      ],
+      checklist: [
+        {
+          step: "01",
+          title: "University Admission",
+          desc: "Notification of selection/admission to full-time studies in Sweden.",
+        },
+        {
+          step: "02",
+          title: "Proof of Maintenance Funds",
+          desc: "Bank statement showing required funds available in your name.",
+        },
+        {
+          step: "03",
+          title: "Comprehensive Insurance",
+          desc: "Proof of health/medical insurance meeting Migrationsverket requirements.",
+        },
+        {
+          step: "04",
+          title: "Passport & Application",
+          desc: "Valid passport and submitted residence permit application.",
+        },
+      ],
+      importantNote:
+        "Maintenance requirements, application fees, and residence permit rules can change. Always confirm current Swedish Migration Agency (Migrationsverket) guidelines before applying.",
     },
   };
 

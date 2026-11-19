@@ -49,7 +49,7 @@ const tagscard = [
 export default function Hero() {
   return (
     <section className="relative w-full">
-      <div className="relative mt-[100px] lg:h-[440px] md:mt-[120px] h-[380px]  w-full overflow-hidden bg-gradient-to-br from-[#0265aa] via-blue-500 to-[#0265aa]">
+      <div className="relative mt-[100px] lg:h-[440px] md:mt-[120px] h-[380px] bg-gradient-to-br from-[#0265aa] via-[#004d85] to-[#001f3f]  w-full overflow-hidden ">
         <p className="text-white lg:p-15 p-10">
           Home / <span className="text-blue-950">About Us</span>
         </p>
@@ -58,7 +58,7 @@ export default function Hero() {
             variants={container}
             initial="hidden"
             animate="visible"
-            className="absolute lg:top-59 lg:right-5 lg:text-6xl text-2xl top-59 right-2 font-extrabold text-black/20"
+            className="absolute lg:top-59 lg:right-5 lg:text-6xl text-2xl top-59 right-2 font-extrabold text-white/20"
           >
             {text.split("").map((char, index) => (
               <motion.span
@@ -98,7 +98,7 @@ export default function Hero() {
           >
             Pakistan’s Most Trusted Study Abroad Consultancy
           </motion.h1>
-          <p className="text-gray-600 lg:w-200">
+          <p className="text-slate-300 lg:w-200">
             Orbis Nexa helps students explore international education
             opportunities with personalised guidance on universities, admissions
             and student visas.

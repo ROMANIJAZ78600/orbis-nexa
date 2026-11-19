@@ -11,7 +11,7 @@ import {
 
 export default function Support() {
   return (
-    <section className="relative w-full bg-gradient-to-br from-[#0265aa] via-blue-500 to-[#0265aa] py-16 px-4 sm:px-6 lg:px-12">
+    <section className="relative w-full bg-gradient-to-br from-[#0265aa] via-[#004d85] to-[#001f3f] py-16 px-4 sm:px-6 lg:px-12">
       <p className="relative  flex items-center gap-3 tracking-[0.1em] w-59 bg-blue-200/20 border-1 font-bold border-blue-400/50 px-3 py-2 rounded-full text-black/50 text-sm">
         <motion.span
           animate={{
@@ -30,7 +30,7 @@ export default function Support() {
       </p>
       <h2 className="lg:text-6xl text-3xl lg:w-220 lg:leading-16 mt-3 font-semibold">
         Everything you need to move from{" "}
-        <span className="text-blue-800">confusion to confidence.</span>
+        <span className="text-blue-400">confusion to confidence.</span>
       </h2>
       <p className="text-gray-300  mt-2 lg:text-lg mt-5">
         One connected support journey—from understanding your profile to

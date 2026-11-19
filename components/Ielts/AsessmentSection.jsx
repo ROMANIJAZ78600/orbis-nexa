@@ -41,7 +41,10 @@ export default function IeltsAssessmentSection() {
   };
 
   return (
-    <section className="min-h-screen w-full bg-gradient-to-br from-[#0265aa] via-[#004d85] to-[#001f3f] flex items-center justify-center px-6 py-16 lg:px-16">
+    <section
+      id="Assesment"
+      className="min-h-screen w-full bg-gradient-to-br from-[#0265aa] via-[#004d85] to-[#001f3f] flex items-center justify-center px-6 py-16 lg:px-16"
+    >
       <div className="max-w-6xl w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 items-center">
         {/* Left Column: Heading & Contact Card */}
         <div className="lg:col-span-5 space-y-6">
@@ -85,7 +88,7 @@ export default function IeltsAssessmentSection() {
           {/* Contact Info Box */}
           <div className="mt-8 p-6 rounded-2xl bg-white/[0.04] border border-white/10 backdrop-blur-sm max-w-md">
             <p className="text-blue-400 text-[11px] font-bold tracking-[0.12em] uppercase mb-3">
-              EDIT CONTACT · STUDY APEX GLOBAL
+              EDIT CONTACT · Orbis Nexa
             </p>
             <div className="space-y-1.5 text-sm text-slate-200">
               <p>
@@ -117,7 +120,7 @@ export default function IeltsAssessmentSection() {
                     placeholder="Your full name"
                     value={formData.fullName}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 text-sm text-slate-800 bg-white border border-slate-200 rounded-xl placeholder:text-slate-400 focus:outline-none focus:border-[#8ce635] focus:ring-2 focus:ring-[#8ce635]/30 transition"
+                    className="w-full px-4 py-3 text-sm text-slate-800 bg-white border border-slate-200 rounded-xl placeholder:text-slate-400 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/30 transition"
                   />
                 </div>
 
@@ -132,7 +135,7 @@ export default function IeltsAssessmentSection() {
                     placeholder="03XX XXXXXXX"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 text-sm text-slate-800 bg-white border border-slate-200 rounded-xl placeholder:text-slate-400 focus:outline-none focus:border-[#8ce635] focus:ring-2 focus:ring-[#8ce635]/30 transition"
+                    className="w-full px-4 py-3 text-sm text-slate-800 bg-white border border-slate-200 rounded-xl placeholder:text-slate-400 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/30 transition"
                   />
                 </div>
               </div>
@@ -148,7 +151,7 @@ export default function IeltsAssessmentSection() {
                       name="ieltsRoute"
                       value={formData.ieltsRoute}
                       onChange={handleChange}
-                      className="w-full appearance-none px-4 py-3 text-sm text-slate-800 bg-white border border-slate-200 rounded-xl focus:outline-none focus:border-[#8ce635] focus:ring-2 focus:ring-[#8ce635]/30 transition pr-10"
+                      className="w-full appearance-none px-4 py-3 text-sm text-slate-800 bg-white border border-slate-200 rounded-xl focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/30 transition pr-10"
                     >
                       <option value="Not sure — guide me">
                         Not sure — guide me
@@ -175,7 +178,7 @@ export default function IeltsAssessmentSection() {
                       name="targetBand"
                       value={formData.targetBand}
                       onChange={handleChange}
-                      className="w-full appearance-none px-4 py-3 text-sm text-slate-800 bg-white border border-slate-200 rounded-xl focus:outline-none focus:border-[#8ce635] focus:ring-2 focus:ring-[#8ce635]/30 transition pr-10"
+                      className="w-full appearance-none px-4 py-3 text-sm text-slate-800 bg-white border border-slate-200 rounded-xl focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/30 transition pr-10"
                     >
                       <option value="Not decided">Not decided</option>
                       <option value="6.0 Band">6.0 Band</option>
@@ -199,7 +202,7 @@ export default function IeltsAssessmentSection() {
                       name="currentLevel"
                       value={formData.currentLevel}
                       onChange={handleChange}
-                      className="w-full appearance-none px-4 py-3 text-sm text-slate-800 bg-white border border-slate-200 rounded-xl focus:outline-none focus:border-[#8ce635] focus:ring-2 focus:ring-[#8ce635]/30 transition pr-10"
+                      className="w-full appearance-none px-4 py-3 text-sm text-slate-800 bg-white border border-slate-200 rounded-xl focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/30 transition pr-10"
                     >
                       <option value="Never tested">Never tested</option>
                       <option value="Beginner (4.0 - 4.5)">
@@ -225,7 +228,7 @@ export default function IeltsAssessmentSection() {
                       name="preferredMode"
                       value={formData.preferredMode}
                       onChange={handleChange}
-                      className="w-full appearance-none px-4 py-3 text-sm text-slate-800 bg-white border border-slate-200 rounded-xl focus:outline-none focus:border-[#8ce635] focus:ring-2 focus:ring-[#8ce635]/30 transition pr-10"
+                      className="w-full appearance-none px-4 py-3 text-sm text-slate-800 bg-white border border-slate-200 rounded-xl focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/30 transition pr-10"
                     >
                       <option value="On-campus">On-campus</option>
                       <option value="Online Classes">Online Classes</option>
@@ -247,7 +250,7 @@ export default function IeltsAssessmentSection() {
                   placeholder="Tell us your test date, study destination or weakest skill..."
                   value={formData.goal}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 text-sm text-slate-800 bg-white border border-slate-200 rounded-xl placeholder:text-slate-400 focus:outline-none focus:border-[#8ce635] focus:ring-2 focus:ring-[#8ce635]/30 transition resize-y"
+                  className="w-full px-4 py-3 text-sm text-slate-800 bg-white border border-slate-200 rounded-xl placeholder:text-slate-400 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/30 transition resize-y"
                 />
               </div>
 

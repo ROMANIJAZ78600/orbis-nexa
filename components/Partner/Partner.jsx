@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight, Check } from "lucide-react";
+import { useRouter } from "next/navigation";
 import { FaUserFriends } from "react-icons/fa";
 import { FaHandshake, FaUsers } from "react-icons/fa6";
 
@@ -12,6 +13,17 @@ const selectClass =
   "lg:w-70 w-full  appearance-none rounded-xl border border-gray-200 bg-gray-50 px-3 py-2 text-sm text-gray-600 outline-none transition-all duration-200 focus:border-[#0265AA] focus:bg-white focus:ring-4 focus:ring-[#0265AA]/10";
 
 export default function Hero() {
+  const router = useRouter();
+
+  const handleScroll = (e, targetId) => {
+    if (targetId.startsWith("#")) {
+      e.preventDefault();
+      const element = document.getElementById(targetId.replace("#", ""));
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  };
   return (
     <section className="relative w-full">
       <div className="relative mt-[100px] md:mt-[120px] min-h-[700px] w-full overflow-hidden bg-gradient-to-br from-[#0265aa] via-[#004d85] to-[#001f3f]">
@@ -51,14 +63,25 @@ export default function Hero() {
               </p>
 
               <div className="flex lg:flex-row flex-col gap-3">
-                <button className="group inline-flex items-center gap-3 rounded-xl bg-[#0265AA] px-7 py-4 font-semibold text-white transition-all duration-300 hover:bg-[#7ed9fd] hover:text-[#0265AA]">
+                <button
+                  onClick={() => {
+                    const target = document.getElementById("partnership");
+                    if (target) {
+                      target.scrollIntoView({ behavior: "smooth" });
+                    }
+                  }}
+                  className="group inline-flex items-center gap-3 rounded-xl bg-[#0265AA] px-7 py-4 font-semibold text-white transition-all duration-300 hover:bg-[#7ed9fd] hover:text-[#0265AA]"
+                >
                   Become a Partner
                   <ArrowRight
                     size={19}
                     className="transition-transform duration-300 group-hover:translate-x-2"
                   />
                 </button>
-                <button className="group inline-flex items-center gap-3 rounded-xl border-2 border-white px-7 py-4 font-semibold text-white transition-all duration-300 hover:bg-white hover:text-[#0265AA]">
+                <button
+                  onClick={() => router.push("/contact")}
+                  className="group inline-flex items-center gap-3 rounded-xl border-2 border-white px-7 py-4 font-semibold text-white transition-all duration-300 hover:bg-white hover:text-[#0265AA]"
+                >
                   Explore Partnerships
                 </button>
               </div>

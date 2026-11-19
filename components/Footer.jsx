@@ -4,7 +4,7 @@ import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa6";
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-[#050505] text-white">
+    <footer className="w-full bg-[#050505] text-white border-1 border-black/10 rounded-tl-[30px] rounded-tr-[30px] lg:rounded-tl-[60px] lg:rounded-tr-[60px] ">
       {/* MAIN FOOTER CONTENT */}
       <div className="mx-auto max-w-7xl px-6 py-16 sm:px-10 lg:px-12">
         <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-12">
@@ -40,17 +40,37 @@ export default function Footer() {
             {/* Social Icons */}
             <div className="mt-8 flex items-center gap-3">
               {[
-                { icon: FaFacebook, href: "#" },
-                { icon: FaInstagram, href: "#" },
-                { icon: FaLinkedin, href: "#" },
-                { icon: Phone, href: "#" },
+                {
+                  icon: FaFacebook,
+                  href: "#",
+                  hoverClass:
+                    "hover:border-[#1877F2] hover:bg-[#1877F2] hover:text-white",
+                },
+                {
+                  icon: FaInstagram,
+                  href: "#",
+                  hoverClass:
+                    "hover:border-[#E4405F] hover:bg-gradient-to-tr hover:from-[#f09433] hover:via-[#dc2743] hover:to-[#bc1888] hover:text-white",
+                },
+                {
+                  icon: FaLinkedin,
+                  href: "#",
+                  hoverClass:
+                    "hover:border-[#0A66C2] hover:bg-[#0A66C2] hover:text-white",
+                },
+                {
+                  icon: Phone,
+                  href: "tel:+923070474920",
+                  hoverClass:
+                    "hover:border-[#25D366] hover:bg-[#25D366] hover:text-white",
+                },
               ].map((item, idx) => {
                 const Icon = item.icon;
                 return (
                   <Link
                     key={idx}
                     href={item.href}
-                    className="flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-gray-300 backdrop-blur-sm transition-all duration-300 hover:border-[#0265AA] hover:bg-[#0265AA] hover:text-white"
+                    className={`flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-gray-300 backdrop-blur-sm transition-all duration-300 ${item.hoverClass}`}
                   >
                     <Icon size={17} />
                   </Link>
@@ -72,7 +92,7 @@ export default function Footer() {
                 { label: "About Us", href: "/about" },
                 { label: "Destinations", href: "/destinations" },
                 { label: "Blogs", href: "/blogs" },
-                { label: "IELTS Preparation", href: "/ielts" },
+                { label: "IELTS Preparation", href: "/ielts-preparation" },
                 { label: "Contact Us", href: "/contact" },
               ].map((link, idx) => (
                 <li key={idx} className="flex items-center gap-2">
@@ -101,7 +121,7 @@ export default function Footer() {
                 "Australia",
                 "Canada",
                 "United States",
-                "Ireland",
+                "Italy",
                 "Germany",
               ].map((country, idx) => (
                 <li key={idx} className="flex items-center gap-2">

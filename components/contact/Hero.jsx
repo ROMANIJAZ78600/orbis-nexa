@@ -47,7 +47,7 @@ export default function Hero() {
   };
   return (
     <section className="relative w-full">
-      <div className="relative mt-[100px] md:mt-[120px] min-h-[850px] w-full overflow-hidden bg-gradient-to-br from-[#0265aa] via-blue-500 to-[#0265aa]">
+      <div className="relative mt-[100px] md:mt-[120px] min-h-[850px] w-full overflow-hidden bg-gradient-to-br from-[#0265aa] via-[#004d85] to-[#001f3f]">
         <div className="flex justify-between lg:flex-row flex-col gap-10 px-4 sm:px-6 lg:px-0">
           {/* LEFT CONTENT - ORIGINAL DESIGN */}
           <div className="min-w-0">

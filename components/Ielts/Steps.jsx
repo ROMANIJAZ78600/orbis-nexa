@@ -48,8 +48,8 @@ export default function Steps() {
             should reveal what to fix, what to repeat and what to stop doing.
           </p>
 
-          <div className="flex flex-col gap-1 p-5 border-l-4 mt-7 border-orange-400 bg-blue-950 rounded-r-2xl shadow-md max-w-md">
-            <span className="uppercase text-[11px] tracking-wider text-orange-300 font-bold">
+          <div className="flex flex-col gap-1 p-5 border-l-4 mt-7 border-blue-600 bg-black rounded-r-2xl shadow-md max-w-md">
+            <span className="uppercase text-[11px] tracking-wider text-slate-300 font-bold">
               Your target
             </span>
             <span className="text-sm text-white/95 leading-6">
@@ -98,7 +98,7 @@ export default function Steps() {
                 </div>
 
                 {/* Subtle Arrow */}
-                <span className="text-slate-300 group-hover:text-orange-400 group-hover:translate-x-1 transition-all text-lg font-semibold">
+                <span className="text-slate-300 group-hover:text-blue-400 group-hover:translate-x-1 transition-all text-lg font-semibold">
                   →
                 </span>
               </motion.div>
